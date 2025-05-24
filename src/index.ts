@@ -222,6 +222,15 @@ function extractTokensFromCss(css: string): ExtractedTokens {
           }
         });
       }
+      
+      // Only check for CSS color keywords if no other color formats were found
+      if (!matches || matches.length === 0) {
+        const validColorKeywords = ['red', 'blue', 'green', 'black', 'white', 'gray', 'grey', 'yellow', 'orange', 'purple', 'pink', 'brown', 'cyan', 'magenta', 'lime', 'navy', 'olive', 'teal', 'silver', 'maroon', 'fuchsia', 'aqua'];
+        const keywords = decl.value.split(/\s+/).filter(word => validColorKeywords.includes(word.toLowerCase()));
+        if (keywords.length > 0) {
+          colors.push(...keywords);
+        }
+      }
     }
     
     // Also extract colors from any CSS value that contains color patterns (but still filter)

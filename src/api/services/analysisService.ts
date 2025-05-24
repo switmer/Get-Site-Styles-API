@@ -292,7 +292,7 @@ export class AnalysisService {
     });
 
     // Convert to frequency arrays
-    const dedup = (arr: string[]) => [...new Set(arr)];
+    const dedup = (arr: string[]) => Array.from(new Set(arr));
     const frequencyArray = (arr: string[]) => {
       const freq: Record<string, number> = {};
       for (const v of arr) {
@@ -400,7 +400,7 @@ export class AnalysisService {
 
     // Colors
     if (this.isColorProperty(prop)) {
-      const colorRegex = /(#[0-9a-fA-F]{3,8}|rgba?\([^)]*\)|hsla?\([^)]*\)|[a-z]+)/g;
+      const colorRegex = /(#[0-9a-fA-F]{3,8}|rgba?\([^)]*\)|hsla?\([^)]*\))/g;
       const matches = value.match(colorRegex);
       if (matches) {
         matches.forEach(match => {
@@ -408,6 +408,15 @@ export class AnalysisService {
             collectors.colors.push(match);
           }
         });
+      }
+      
+      // Only check for CSS color keywords if no other color formats were found
+      if (!matches || matches.length === 0) {
+        const validColorKeywords = ['red', 'blue', 'green', 'black', 'white', 'gray', 'grey', 'yellow', 'orange', 'purple', 'pink', 'brown', 'cyan', 'magenta', 'lime', 'navy', 'olive', 'teal', 'silver', 'maroon', 'fuchsia', 'aqua'];
+        const keywords = value.split(/\s+/).filter(word => validColorKeywords.includes(word.toLowerCase()));
+        if (keywords.length > 0) {
+          collectors.colors.push(...keywords);
+        }
       }
     }
 

@@ -120,3 +120,4 @@ docs/generated/
 # Backup files
 *.backup
 *.bak 
+.vercel

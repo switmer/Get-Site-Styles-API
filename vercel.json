@@ -1,35 +1,6 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "src/api/server.ts",
-      "use": "@vercel/node",
-      "config": {
-        "includeFiles": [
-          "src/**/*.ts",
-          "src/**/*.yaml",
-          "package.json",
-          "tsconfig.json"
-        ]
-      }
-    }
-  ],
-  "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "/src/api/server.ts"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/src/api/server.ts"
-    }
-  ],
-  "env": {
-    "NODE_ENV": "production"
-  },
-  "functions": {
-    "src/api/server.ts": {
-      "maxDuration": 30
-    }
-  }
+  "framework": "nextjs",
+  "buildCommand": "pnpm run build",
+  "devCommand": "pnpm run dev",
+  "installCommand": "pnpm install"
 } 

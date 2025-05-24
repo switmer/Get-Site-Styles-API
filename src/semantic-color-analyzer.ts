@@ -233,7 +233,7 @@ function extractComputedColorsFromElements(css: string, elements: NodeListOf<Ele
       let ruleMatches = false;
       
       // Check for tag name matches
-      for (const tag of tagNames) {
+      for (const tag of Array.from(tagNames)) {
         if (selector.includes(tag)) {
           ruleMatches = true;
           break;
@@ -242,7 +242,7 @@ function extractComputedColorsFromElements(css: string, elements: NodeListOf<Ele
       
       // Check for class name matches
       if (!ruleMatches) {
-        for (const className of classNames) {
+        for (const className of Array.from(classNames)) {
           if (selector.includes(`.${className}`) || selector.includes(`[class*="${className}"]`)) {
             ruleMatches = true;
             break;
@@ -252,7 +252,7 @@ function extractComputedColorsFromElements(css: string, elements: NodeListOf<Ele
       
       // Check for ID matches
       if (!ruleMatches) {
-        for (const id of ids) {
+        for (const id of Array.from(ids)) {
           if (selector.includes(`#${id}`)) {
             ruleMatches = true;
             break;
@@ -784,7 +784,7 @@ function extractTailwindColors(html: string): Array<{ color: string; property: s
   // Process Tailwind patterns
   tailwindPatterns.forEach(({ pattern, property, isArbitrary }) => {
     classFrequency.forEach((frequency, className) => {
-      const matches = [...className.matchAll(pattern)];
+      const matches = Array.from(className.matchAll(pattern));
       matches.forEach(match => {
         let hexColor: string | undefined;
         

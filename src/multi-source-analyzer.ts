@@ -342,7 +342,7 @@ export class MultiSourceAnalyzer {
     }
     
     // Convert back to the expected format
-    for (const [prop, data] of propMap) {
+    for (const [prop, data] of Array.from(propMap)) {
       const { sourceWeight, ...cleanData } = data;
       merged.customProperties[prop] = cleanData;
     }

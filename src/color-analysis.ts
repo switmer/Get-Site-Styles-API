@@ -867,12 +867,12 @@ function groupSimilarColors(colorFrequency: FrequencyItem[]): FrequencyItem[] {
   
   // For each group, select the most frequent color as representative
   const result: FrequencyItem[] = [];
-  for (const group of groups.values()) {
+  for (const group of Array.from(groups.values())) {
     if (group.colors.length === 1) {
       result.push(group.colors[0]);
     } else {
       // Find the most frequent color in the group and boost its count
-      const sortedColors = group.colors.sort((a, b) => b.count - a.count);
+      const sortedColors = group.colors.sort((a: FrequencyItem, b: FrequencyItem) => b.count - a.count);
       const representative = { ...sortedColors[0] };
       representative.count = group.totalCount; // Combine all counts
       result.push(representative);
@@ -1003,7 +1003,7 @@ export function analyzeColors(
         hue: hsl.h,
         contrast,
         frequency: totalFrequency, // Combined frequency from all variants
-        sources: [...new Set(variants.map(v => v.source))], // Unique sources
+        sources: Array.from(new Set(variants.map(v => v.source))), // Unique sources
         confidence: totalFrequency > 10 ? 0.8 : 0.5
       };
       
