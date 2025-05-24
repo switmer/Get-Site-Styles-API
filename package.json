@@ -7,8 +7,8 @@
     "start": "ts-node src/index.ts",
     "build": "tsc",
     "api:dev": "ts-node src/api/server.ts",
-    "api:start": "node dist/api/server.js",
-    "api:build": "tsc && mkdir -p dist/api && cp src/api/openapi.yaml dist/api/",
+    "api:start": "node dist/src/api/server.js",
+    "api:build": "tsc && mkdir -p dist/src/api && cp src/api/openapi.yaml dist/src/api/",
     "lint": "eslint . --ext .ts,.tsx",
     "format": "prettier --write .",
     "test": "jest"
