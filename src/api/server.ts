@@ -46,8 +46,13 @@ class GetSiteStylesServer {
       allowedHeaders: ['Content-Type', 'Authorization', 'X-API-Key']
     }));
 
-    // Logging
-    this.app.use(morgan('combined'));
+    // Logging - exclude health checks from verbose logs
+    this.app.use(morgan('combined', {
+      skip: (req: Request) => {
+        // Skip logging for health checks to reduce log noise
+        return req.url === '/api/v1/health' || req.url === '/';
+      }
+    }));
 
     // Body parsing
     this.app.use(express.json({ limit: '10mb' }));
@@ -202,6 +207,11 @@ class GetSiteStylesServer {
         active: apiKeys.filter(k => k.isActive).length
       }
     };
+    
+    // Only log health check requests in development or if they fail
+    if (process.env.NODE_ENV === 'development' && health.status !== 'healthy') {
+      console.log('Health check requested:', health);
+    }
     
     res.json(health);
   }
