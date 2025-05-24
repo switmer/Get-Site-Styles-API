@@ -1,0 +1,23 @@
+:root {
+  --radius: 0.5rem;
+  --primary: #e6ff00;
+  --ring: #e6ff00;
+  --primary-foreground: #000000;
+  --secondary: #e6ff03;
+  --secondary-foreground: #000000;
+  --accent: #edff4a;
+  --accent-foreground: #000000;
+  --muted: #ababab;
+  --muted-foreground: #000000;
+
+  /* Layout Zone Colors */
+  --footer-background: rgba(171, 171, 171, 0.03);
+  --footer-foreground: #000000;
+
+  /* Additional Brand Colors */
+  --brand-1: rgba(171, 171, 171, 0.03);
+  --brand-2: rgb(31, 31, 31);
+  --brand-3: rgb(0, 0, 0);
+  --brand-4: rgb(230, 255, 0);
+  --brand-5: rgb(237, 255, 74);
+}

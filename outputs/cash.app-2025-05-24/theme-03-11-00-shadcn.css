@@ -1,0 +1,61 @@
+:root {
+  --radius: 0.5rem;
+  --background: rgba(0,0,0,0);
+  --card: rgba(0,0,0,0);
+  --popover: rgba(0,0,0,0);
+  --primary: #00d64f;
+  --ring: #00d64f;
+  --primary-foreground: #ffffff;
+  --secondary: #128a00;
+  --secondary-foreground: #ffffff;
+  --accent: #00e013;
+  --accent-foreground: #ffffff;
+  --muted: #737373;
+  --muted-foreground: #ffffff;
+  --border: rgb(233, 230, 224);
+  --input: rgb(233, 230, 224);
+
+  /* Layout Zone Colors */
+  --section-background: rgb(233, 230, 224);
+  --section-foreground: #000000;
+
+  /* Additional Brand Colors */
+  --brand-accent-1: #5420c2;
+
+  /* Button Colors */
+  --button-1: rgba(0,0,0,0);
+  --button-2: #FFFFFF;
+  --button-3: #f8f8f8;
+  --button-4: #5c2fa0;
+  --button-5: #000000;
+}
+
+.dark {
+  --radius: 0.5rem;
+  --background: rgba(0,0,0,0);
+  --card: rgba(0,0,0,0);
+  --popover: rgba(0,0,0,0);
+  --primary: #00d64f;
+  --ring: #00d64f;
+  --primary-foreground: #ffffff;
+  --secondary: #128a00;
+  --secondary-foreground: #ffffff;
+  --accent: #00e013;
+  --accent-foreground: #ffffff;
+  --muted: #4b4b4b;
+  --muted-foreground: #ffffff;
+
+  /* Layout Zone Colors */
+  --section-background: rgb(233, 230, 224);
+  --section-foreground: #000000;
+
+  /* Additional Brand Colors */
+  --brand-accent-1: #5420c2;
+
+  /* Button Colors */
+  --button-1: rgba(0,0,0,0);
+  --button-2: #FFFFFF;
+  --button-3: #f8f8f8;
+  --button-4: #5c2fa0;
+  --button-5: #000000;
+}

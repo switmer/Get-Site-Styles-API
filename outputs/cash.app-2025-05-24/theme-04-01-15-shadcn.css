@@ -1,0 +1,67 @@
+:root {
+  --radius: 0.5rem;
+  --background: #000000;
+  --card: #000000;
+  --popover: #000000;
+  --foreground: #141414;
+  --card-foreground: #141414;
+  --popover-foreground: #141414;
+  --primary: #00d64f;
+  --primary-foreground: #ffffff;
+  --ring: #00d64f;
+  --secondary: #128a00;
+  --secondary-foreground: #ffffff;
+  --accent: #00e013;
+  --accent-foreground: #ffffff;
+  --muted: #737373;
+  --muted-foreground: #ffffff;
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+  --border: #e9e6e0;
+  --input: #e9e6e0;
+
+  /* Layout Zone Colors */
+  --section-background: #e9e6e0;
+  --section-foreground: #141414;
+
+  /* Button Colors */
+  --button-1: #f8f8f8;
+  --button-2: #5c2fa0;
+  --button-3: #5420c2;
+  --button-4: #128A00;
+  --button-5: #00D64F;
+}
+
+.dark {
+  --radius: 0.5rem;
+  --background: #000000;
+  --card: #000000;
+  --popover: #000000;
+  --foreground: #ffffff;
+  --card-foreground: #ffffff;
+  --popover-foreground: #ffffff;
+  --primary: #00d64f;
+  --ring: #00d64f;
+  --primary-foreground: #ffffff;
+  --secondary: #20f000;
+  --secondary-foreground: #ffffff;
+  --accent: #00e013;
+  --accent-foreground: #ffffff;
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+  --border: #685e4a;
+  --input: #685e4a;
+  --muted: #404040;
+  --muted-foreground: #ffffff;
+
+  /* Layout Zone Colors */
+  --section-background: #e9e6e0;
+  --section-foreground: #141414;
+
+  /* Button Colors */
+  --button-1: #f8f8f8;
+  --button-2: #5c2fa0;
+  --button-3: #5420c2;
+  --button-4: #128A00;
+  --button-5: #00D64F;
+}

@@ -1,0 +1,258 @@
+{
+  "meta": {
+    "source": "https://onroster.io",
+    "extractedAt": "2025-05-24T03:05:55.849Z",
+    "semanticAnalysis": {
+      "totalElements": 8,
+      "buttonColors": [],
+      "brandColors": [
+        "rgba(171, 171, 171, 0.03)",
+        "rgb(31, 31, 31)",
+        "rgb(0, 0, 0)",
+        "rgb(230, 255, 0)",
+        "rgb(237, 255, 74)"
+      ],
+      "colorsByContext": {
+        "brand": [
+          "rgba(171, 171, 171, 0.03)",
+          "rgb(31, 31, 31)",
+          "rgb(0, 0, 0)",
+          "rgb(230, 255, 0)",
+          "rgb(237, 255, 74)"
+        ]
+      },
+      "highestWeightColors": [
+        "rgba(171, 171, 171, 0.03)",
+        "rgb(31, 31, 31)",
+        "rgb(0, 0, 0)",
+        "rgb(230, 255, 0)",
+        "rgb(237, 255, 74)"
+      ],
+      "tailwind": {
+        "detected": true,
+        "totalClasses": 1014,
+        "colorClasses": [
+          "border-box",
+          "text-autosized",
+          "text-align",
+          "text-alignment",
+          "text-color",
+          "text-transform",
+          "text-decoration",
+          "text-fill",
+          "text-stroke",
+          "text-styles",
+          "text-module",
+          "border-width",
+          "border-radius",
+          "border-bottom",
+          "border-color",
+          "border-left",
+          "border-right",
+          "border-style",
+          "border-top",
+          "stroke-width",
+          "fill-rule"
+        ],
+        "colors": []
+      }
+    },
+    "totalTokens": {
+      "customProperties": 33,
+      "colors": 70,
+      "fontSizes": 18,
+      "fontFamilies": 393,
+      "fontWeights": 304,
+      "lineHeights": 7,
+      "letterSpacings": 7,
+      "spacing": 166,
+      "radii": 6,
+      "shadows": 0,
+      "gradients": 0,
+      "breakpoints": 8,
+      "zIndices": 12,
+      "transitions": 0,
+      "opacity": 3,
+      "aspectRatios": 11,
+      "borderWidths": 2,
+      "borderStyles": 4
+    },
+    "format": "shadcn",
+    "colorAnalysis": [
+      {
+        "color": "rgba(171, 171, 171, 0.03)",
+        "role": "muted",
+        "frequency": 8,
+        "lightness": 67,
+        "saturation": 0
+      },
+      {
+        "color": "rgb(31, 31, 31)",
+        "role": "muted",
+        "frequency": 4,
+        "lightness": 12,
+        "saturation": 0
+      },
+      {
+        "color": "rgb(0, 0, 0)",
+        "role": "muted",
+        "frequency": 4,
+        "lightness": 0,
+        "saturation": 0
+      },
+      {
+        "color": "#e6ff032b",
+        "role": "primary",
+        "frequency": 2,
+        "lightness": 51,
+        "saturation": 100
+      },
+      {
+        "color": "rgba(230, 255, 0, .42)",
+        "role": "secondary",
+        "frequency": 2,
+        "lightness": 50,
+        "saturation": 100
+      },
+      {
+        "color": "#e6ff0030",
+        "role": "accent",
+        "frequency": 2,
+        "lightness": 50,
+        "saturation": 100
+      },
+      {
+        "color": "#d8e843",
+        "role": "neutral",
+        "frequency": 2,
+        "lightness": 59,
+        "saturation": 78
+      },
+      {
+        "color": "rgba(153, 153, 153, .6)",
+        "role": "muted",
+        "frequency": 2,
+        "lightness": 60,
+        "saturation": 0
+      },
+      {
+        "color": "rgb(230, 255, 0)",
+        "role": "neutral",
+        "frequency": 1,
+        "lightness": 50,
+        "saturation": 100
+      },
+      {
+        "color": "rgb(237, 255, 74)",
+        "role": "neutral",
+        "frequency": 1,
+        "lightness": 65,
+        "saturation": 100
+      }
+    ]
+  },
+  "css": ":root {\n  --radius: 0.5rem;\n  --primary: #e6ff032b;\n  --ring: #e6ff032b;\n  --primary-foreground: #000000;\n  --secondary: rgba(230, 255, 0, .42);\n  --secondary-foreground: #000000;\n  --accent: #e6ff0030;\n  --accent-foreground: #000000;\n  --muted: rgba(171, 171, 171, 0.03);\n  --muted-foreground: #000000;\n\n  /* Layout Zone Colors */\n  --footer-background: rgba(171, 171, 171, 0.03);\n  --footer-foreground: #000000;\n\n  /* Additional Brand Colors */\n  --brand-1: rgba(171, 171, 171, 0.03);\n  --brand-2: rgb(31, 31, 31);\n  --brand-3: rgb(0, 0, 0);\n  --brand-4: rgb(230, 255, 0);\n  --brand-5: rgb(237, 255, 74);\n}",
+  "theme": {
+    "light": {
+      "--radius": "0.5rem",
+      "--primary": "#e6ff032b",
+      "--ring": "#e6ff032b",
+      "--primary-foreground": "#000000",
+      "--secondary": "rgba(230, 255, 0, .42)",
+      "--secondary-foreground": "#000000",
+      "--accent": "#e6ff0030",
+      "--accent-foreground": "#000000",
+      "--muted": "rgba(171, 171, 171, 0.03)",
+      "--muted-foreground": "#000000"
+    },
+    "layoutZoneColors": {
+      "--footer-background": "rgba(171, 171, 171, 0.03)",
+      "--footer-foreground": "#000000"
+    },
+    "additionalBrandColors": {
+      "--brand-1": "rgba(171, 171, 171, 0.03)",
+      "--brand-2": "rgb(31, 31, 31)",
+      "--brand-3": "rgb(0, 0, 0)",
+      "--brand-4": "rgb(230, 255, 0)",
+      "--brand-5": "rgb(237, 255, 74)"
+    },
+    "buttonColors": {}
+  },
+  "tokens": {
+    "colors": [
+      "rgba(171, 171, 171, 0.03)",
+      "rgb(230, 255, 0)",
+      "rgb(237, 255, 74)",
+      "rgb(31, 31, 31)",
+      "rgb(0, 0, 0)",
+      "#000",
+      "#000000",
+      "#e6ff032b",
+      "rgba(230, 255, 0, .42)",
+      "#e6ff0030",
+      "#fff",
+      "#d8e843",
+      "rgba(153, 153, 153, .6)"
+    ],
+    "fontSizes": [
+      "12px",
+      "16px"
+    ],
+    "spacing": [
+      "0%",
+      "0em",
+      "1.3em",
+      "100%",
+      "0px",
+      "100px",
+      "186px",
+      "166px",
+      "60px",
+      "32px",
+      "30px",
+      "16px",
+      "10px",
+      "6px",
+      "22px",
+      "12px",
+      "37px",
+      "5px",
+      "4px",
+      "14px",
+      "80px",
+      "40px",
+      "50px",
+      "15px",
+      "8px",
+      "18.5px",
+      "2.5px",
+      "120px",
+      "90px",
+      "35px",
+      "70px",
+      "25px",
+      "17.5px",
+      "65px",
+      "18px",
+      "44px",
+      "20px",
+      "48px",
+      "7px",
+      "24px",
+      "9px",
+      "36px",
+      "42px",
+      "62px",
+      "21px",
+      "72px",
+      "41px",
+      "52px",
+      "31px"
+    ],
+    "radii": [
+      "40px",
+      "100px",
+      "100%"
+    ]
+  }
+}

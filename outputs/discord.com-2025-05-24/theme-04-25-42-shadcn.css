@@ -1,0 +1,85 @@
+:root {
+  --radius: 0.5rem;
+  --background: #ffffff;
+  --card: #ffffff;
+  --popover: #ffffff;
+  --foreground: #141414;
+  --card-foreground: #141414;
+  --popover-foreground: #141414;
+  --primary: #5865f2;
+  --primary-foreground: #141414;
+  --ring: #5865f2;
+  --secondary: #b377f3;
+  --secondary-foreground: #141414;
+  --accent: #4f51f5;
+  --accent-foreground: #141414;
+  --muted: #23272a;
+  --muted-foreground: #ffffff;
+  --destructive: #f04747;
+  --destructive-foreground: #141414;
+  --border: #c7c8ce;
+  --input: #c7c8ce;
+
+  /* Layout Zone Colors */
+  --header-background: #8ea1e1;
+  --header-foreground: #141414;
+  --hero-background: #23272a;
+  --hero-foreground: #ffffff;
+  --section-background: #161CBB;
+  --section-foreground: #ffffff;
+
+  /* Additional Brand Colors */
+  --brand-1: #23272a;
+  --brand-2: #fff6;
+  --brand-3: #7289da;
+
+  /* Button Colors */
+  --button-1: #c7c8ce;
+  --button-2: #ffffff;
+  --button-3: #7289da;
+  --button-4: #57f287;
+  --button-5: #23272a;
+}
+
+.dark {
+  --radius: 0.5rem;
+  --background: #262626;
+  --card: #262626;
+  --popover: #262626;
+  --foreground: #ffffff;
+  --card-foreground: #ffffff;
+  --popover-foreground: #ffffff;
+  --primary: #5966f3;
+  --ring: #5966f3;
+  --primary-foreground: #141414;
+  --secondary: #b377f3;
+  --secondary-foreground: #141414;
+  --accent: #5154f5;
+  --accent-foreground: #141414;
+  --destructive: #f04747;
+  --destructive-foreground: #141414;
+  --border: #4b4d56;
+  --input: #4b4d56;
+  --muted: #3a4145;
+  --muted-foreground: #ffffff;
+
+  /* Layout Zone Colors */
+  --header-background: #8ea1e1;
+  --header-foreground: #141414;
+  --hero-background: #23272a;
+  --hero-foreground: #ffffff;
+  --section-background: #161CBB;
+  --section-foreground: #ffffff;
+
+  /* Additional Brand Colors */
+  --brand-1: #23272a;
+  --brand-2: #fff6;
+  --brand-3: #7289da;
+
+  /* Button Colors */
+  --button-1: #c7c8ce;
+  --button-2: #ffffff;
+  --button-3: #7289da;
+  --button-4: #57f287;
+  --button-5: #23272a;
+}

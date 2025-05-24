@@ -1,0 +1,176 @@
+{
+  "meta": {
+    "source": "https://onroster.io",
+    "extractedAt": "2025-05-24T03:29:28.212Z",
+    "totalTokens": {
+      "customProperties": 33,
+      "colors": 54,
+      "fontSizes": 18,
+      "fontFamilies": 393,
+      "fontWeights": 304,
+      "lineHeights": 7,
+      "letterSpacings": 7,
+      "spacing": 166,
+      "radii": 6,
+      "shadows": 0,
+      "gradients": 0,
+      "breakpoints": 8,
+      "zIndices": 12,
+      "transitions": 0,
+      "opacity": 3,
+      "aspectRatios": 11,
+      "borderWidths": 2,
+      "borderStyles": 4
+    },
+    "format": "shadcn",
+    "colorAnalysis": [
+      {
+        "color": "rgb(230, 255, 0)",
+        "role": "secondary",
+        "frequency": 5,
+        "lightness": 50,
+        "saturation": 100
+      },
+      {
+        "color": "#e6ff032b",
+        "role": "primary",
+        "frequency": 2,
+        "lightness": 51,
+        "saturation": 100
+      },
+      {
+        "color": "#d8e843",
+        "role": "neutral",
+        "frequency": 2,
+        "lightness": 59,
+        "saturation": 78
+      },
+      {
+        "color": "rgba(153, 153, 153, .6)",
+        "role": "muted",
+        "frequency": 2,
+        "lightness": 60,
+        "saturation": 0
+      },
+      {
+        "color": "rgb(237, 255, 74)",
+        "role": "accent",
+        "frequency": 1,
+        "lightness": 65,
+        "saturation": 100
+      }
+    ]
+  },
+  "css": ":root {\n  --radius: 0.5rem;\n  --primary: #e6ff03;\n  --ring: #e6ff03;\n  --primary-foreground: #000000;\n  --secondary: #e6ff00;\n  --secondary-foreground: #000000;\n  --accent: #edff4a;\n  --accent-foreground: #000000;\n  --muted: #999999;\n  --muted-foreground: #000000;\n}\n\n.dark {\n  --radius: 0.5rem;\n  --background: #0a0a0a;\n  --card: #0a0a0a;\n  --popover: #0a0a0a;\n  --foreground: #f5f5f5;\n  --card-foreground: #f5f5f5;\n  --popover-foreground: #f5f5f5;\n  --primary: #e6ff03;\n  --ring: #e6ff03;\n  --primary-foreground: #ffffff;\n  --secondary: #e6ff00;\n  --secondary-foreground: #ffffff;\n  --accent: #edff4a;\n  --accent-foreground: #000000;\n  --border: #2a2a2a;\n  --input: #2a2a2a;\n  --muted: #4d4d4d;\n  --muted-foreground: #ffffff;\n}",
+  "theme": {
+    "light": {
+      "--radius": "0.5rem",
+      "--primary": "#e6ff03",
+      "--ring": "#e6ff03",
+      "--primary-foreground": "#000000",
+      "--secondary": "#e6ff00",
+      "--secondary-foreground": "#000000",
+      "--accent": "#edff4a",
+      "--accent-foreground": "#000000",
+      "--muted": "#999999",
+      "--muted-foreground": "#000000"
+    },
+    "dark": {
+      "--radius": "0.5rem",
+      "--background": "#0a0a0a",
+      "--card": "#0a0a0a",
+      "--popover": "#0a0a0a",
+      "--foreground": "#f5f5f5",
+      "--card-foreground": "#f5f5f5",
+      "--popover-foreground": "#f5f5f5",
+      "--primary": "#e6ff03",
+      "--ring": "#e6ff03",
+      "--primary-foreground": "#ffffff",
+      "--secondary": "#e6ff00",
+      "--secondary-foreground": "#ffffff",
+      "--accent": "#edff4a",
+      "--accent-foreground": "#000000",
+      "--border": "#2a2a2a",
+      "--input": "#2a2a2a",
+      "--muted": "#4d4d4d",
+      "--muted-foreground": "#ffffff"
+    },
+    "layoutZoneColors": {},
+    "additionalBrandColors": {},
+    "buttonColors": {}
+  },
+  "tokens": {
+    "colors": [
+      "rgb(230, 255, 0)",
+      "rgb(237, 255, 74)",
+      "#000",
+      "#000000",
+      "#e6ff032b",
+      "rgba(230, 255, 0, .42)",
+      "#e6ff0030",
+      "#fff",
+      "#d8e843",
+      "rgba(153, 153, 153, .6)"
+    ],
+    "fontSizes": [
+      "12px",
+      "16px"
+    ],
+    "spacing": [
+      "0%",
+      "0em",
+      "1.3em",
+      "100%",
+      "0px",
+      "100px",
+      "186px",
+      "166px",
+      "60px",
+      "32px",
+      "30px",
+      "16px",
+      "10px",
+      "6px",
+      "22px",
+      "12px",
+      "37px",
+      "5px",
+      "4px",
+      "14px",
+      "80px",
+      "40px",
+      "50px",
+      "15px",
+      "8px",
+      "18.5px",
+      "2.5px",
+      "120px",
+      "90px",
+      "35px",
+      "70px",
+      "25px",
+      "17.5px",
+      "65px",
+      "18px",
+      "44px",
+      "20px",
+      "48px",
+      "7px",
+      "24px",
+      "9px",
+      "36px",
+      "42px",
+      "62px",
+      "21px",
+      "72px",
+      "41px",
+      "52px",
+      "31px"
+    ],
+    "radii": [
+      "40px",
+      "100px",
+      "100%"
+    ]
+  }
+}

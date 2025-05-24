@@ -1,0 +1,619 @@
+openapi: 3.0.3
+info:
+  title: Get-Site-Styles API
+  description: |
+    Extract design tokens, colors, typography, and other style properties from websites.
+    
+    This API analyzes websites and extracts comprehensive design system tokens that can be used to recreate or understand the visual design patterns. It supports multiple output formats including JSON, Style Dictionary, shadcn/ui themes, Tailwind configurations, and theme.json formats.
+    
+    ## Features
+    - **Style Extraction**: Extract colors, typography, spacing, shadows, and more from any website
+    - **Multiple Formats**: Output in JSON, Style Dictionary, shadcn/ui, Tailwind, or theme.json formats
+    - **Semantic Analysis**: Analyze HTML elements for semantic color importance (buttons, navigation, etc.)
+    - **Image Analysis**: Extract brand colors from images (optional)
+    - **Multi-Source Analysis**: Combine analysis from multiple URLs for comprehensive design systems
+    - **Brand Color Detection**: Advanced algorithms to identify primary, secondary, and accent colors
+    - **Framework Detection**: Automatically detect and filter out framework colors (Bootstrap, Material, etc.)
+    
+    ## Authentication
+    All endpoints require an API key. You can provide it in several ways:
+    - `Authorization: Bearer YOUR_API_KEY` header
+    - `X-API-Key: YOUR_API_KEY` header  
+    - `?apiKey=YOUR_API_KEY` query parameter
+    
+    ## Rate Limits
+    - **Basic**: 100 requests per 15 minutes, 1,000/month
+    - **Premium**: 500 requests per 15 minutes, 10,000/month
+    - **Enterprise**: 2,000 requests per 15 minutes, 100,000/month
+    
+  version: 1.0.0
+  contact:
+    name: Get-Site-Styles API Support
+    email: support@example.com
+  license:
+    name: ISC
+servers:
+  - url: https://api.get-site-styles.com/api/v1
+    description: Production server
+  - url: http://localhost:3000/api/v1
+    description: Development server
+
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: X-API-Key
+      description: API key for authentication
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: API_KEY
+      description: Bearer token authentication
+    QueryAuth:
+      type: apiKey
+      in: query
+      name: apiKey
+      description: API key as query parameter
+
+  schemas:
+    AnalyzeRequest:
+      type: object
+      required:
+        - url
+      properties:
+        url:
+          type: string
+          format: uri
+          description: Primary URL of the website to analyze
+          example: "https://github.com"
+        urls:
+          type: array
+          items:
+            type: string
+            format: uri
+          description: Additional URLs for multi-source analysis
+          example: ["https://docs.github.com", "https://github.blog"]
+        format:
+          type: string
+          enum: [json, style-dictionary, shadcn, tailwind, theme-json]
+          default: json
+          description: Output format for the extracted tokens
+        allFormats:
+          type: boolean
+          default: false
+          description: Generate all output formats in a single request
+        colorFormat:
+          type: string
+          enum: [hsl, oklch, hex]
+          default: hsl
+          description: Color format for shadcn output (space-separated HSL, OKLCH, or hex)
+        compact:
+          type: boolean
+          default: false
+          description: Return compact/minified output
+        includeImages:
+          type: boolean
+          default: false
+          description: Analyze images for additional brand colors (experimental)
+        maxImages:
+          type: integer
+          minimum: 1
+          maximum: 20
+          default: 10
+          description: Maximum number of images to analyze
+        semanticAnalysis:
+          type: boolean
+          default: false
+          description: Analyze HTML elements for semantic color importance
+        auth:
+          type: object
+          description: Authentication for accessing protected websites
+          properties:
+            type:
+              type: string
+              enum: [basic, bearer, cookie, custom]
+            username:
+              type: string
+              description: Username for basic auth
+            password:
+              type: string
+              description: Password for basic auth
+            token:
+              type: string
+              description: Bearer token or API key
+            cookies:
+              type: string
+              description: Cookie string for session auth
+            headers:
+              type: object
+              additionalProperties:
+                type: string
+              description: Custom headers for authentication
+
+    AnalyzeResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          example: true
+        data:
+          type: object
+          description: Extracted design tokens and analysis results
+        meta:
+          type: object
+          properties:
+            url:
+              type: string
+              format: uri
+            urls:
+              type: array
+              items:
+                type: string
+                format: uri
+            extractedAt:
+              type: string
+              format: date-time
+            format:
+              type: string
+            processingTime:
+              type: integer
+              description: Processing time in milliseconds
+            totalTokens:
+              type: object
+              description: Count of extracted tokens by type
+            semanticAnalysis:
+              type: object
+              properties:
+                totalElements:
+                  type: integer
+                buttonColors:
+                  type: integer
+                brandColors:
+                  type: integer
+        timestamp:
+          type: string
+          format: date-time
+        requestId:
+          type: string
+          format: uuid
+
+    ApiError:
+      type: object
+      properties:
+        success:
+          type: boolean
+          example: false
+        error:
+          type: object
+          properties:
+            code:
+              type: string
+              example: "ANALYSIS_FAILED"
+            message:
+              type: string
+              example: "Failed to analyze website"
+            details:
+              type: object
+        timestamp:
+          type: string
+          format: date-time
+        requestId:
+          type: string
+          format: uuid
+
+    HealthCheck:
+      type: object
+      properties:
+        status:
+          type: string
+          enum: [healthy, degraded, unhealthy]
+        timestamp:
+          type: string
+          format: date-time
+        version:
+          type: string
+        uptime:
+          type: number
+          description: Server uptime in seconds
+        memory:
+          type: object
+          properties:
+            used:
+              type: number
+            total:
+              type: number
+            percentage:
+              type: number
+        apiKeys:
+          type: object
+          properties:
+            total:
+              type: integer
+            active:
+              type: integer
+
+    UsageStats:
+      type: object
+      properties:
+        apiKey:
+          type: object
+          properties:
+            id:
+              type: string
+            name:
+              type: string
+            usageCount:
+              type: integer
+            monthlyUsage:
+              type: integer
+            monthlyLimit:
+              type: integer
+            rateLimitTier:
+              type: string
+        usage:
+          type: object
+          properties:
+            last24Hours:
+              type: integer
+            last7Days:
+              type: integer
+            last30Days:
+              type: integer
+            thisMonth:
+              type: integer
+        endpoints:
+          type: array
+          items:
+            type: object
+            properties:
+              endpoint:
+                type: string
+              count:
+                type: integer
+              avgResponseTime:
+                type: integer
+              errorRate:
+                type: integer
+        rateLimits:
+          type: object
+          properties:
+            tier:
+              type: string
+            windowMs:
+              type: integer
+            maxRequests:
+              type: integer
+            currentCount:
+              type: integer
+            resetsAt:
+              type: string
+              format: date-time
+
+    ApiKey:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        key:
+          type: string
+          description: The actual API key (only shown when created)
+        name:
+          type: string
+        createdAt:
+          type: string
+          format: date-time
+        lastUsedAt:
+          type: string
+          format: date-time
+        usageCount:
+          type: integer
+        isActive:
+          type: boolean
+        rateLimitTier:
+          type: string
+          enum: [basic, premium, enterprise]
+        monthlyLimit:
+          type: integer
+        monthlyUsage:
+          type: integer
+
+security:
+  - ApiKeyAuth: []
+  - BearerAuth: []
+  - QueryAuth: []
+
+paths:
+  /analyze:
+    post:
+      summary: Analyze a website for design tokens
+      description: |
+        Extract design tokens from a website including colors, typography, spacing, and more.
+        
+        This endpoint analyzes the provided URL and extracts comprehensive design system tokens.
+        You can specify the output format and enable various analysis features like semantic analysis and image processing.
+      operationId: analyzeWebsite
+      tags:
+        - Analysis
+      security:
+        - ApiKeyAuth: []
+        - BearerAuth: []
+        - QueryAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AnalyzeRequest'
+            examples:
+              basic:
+                summary: Basic analysis
+                value:
+                  url: "https://github.com"
+                  format: "json"
+              advanced:
+                summary: Advanced analysis with semantic features
+                value:
+                  url: "https://stripe.com"
+                  format: "shadcn"
+                  colorFormat: "hsl"
+                  semanticAnalysis: true
+                  includeImages: true
+              multi-source:
+                summary: Multi-source analysis
+                value:
+                  url: "https://shopify.com"
+                  urls: ["https://shopify.dev", "https://polaris.shopify.com"]
+                  allFormats: true
+                  semanticAnalysis: true
+      responses:
+        '200':
+          description: Successfully analyzed website
+          headers:
+            X-Request-ID:
+              schema:
+                type: string
+                format: uuid
+            X-RateLimit-Remaining:
+              schema:
+                type: integer
+            X-RateLimit-Reset:
+              schema:
+                type: string
+                format: date-time
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AnalyzeResponse'
+              examples:
+                json_format:
+                  summary: JSON format response
+                  value:
+                    success: true
+                    data:
+                      tokens:
+                        colors:
+                          values: ["#0969da", "#24292f", "#ffffff"]
+                          frequency: [
+                            { value: "#0969da", count: 15, prevalence: 45.5 },
+                            { value: "#24292f", count: 12, prevalence: 36.4 },
+                            { value: "#ffffff", count: 6, prevalence: 18.2 }
+                          ]
+                        fontSizes:
+                          values: ["14px", "16px", "20px"]
+                          frequency: [
+                            { value: "16px", count: 8, prevalence: 50.0 },
+                            { value: "14px", count: 5, prevalence: 31.3 },
+                            { value: "20px", count: 3, prevalence: 18.8 }
+                          ]
+                    meta:
+                      url: "https://github.com"
+                      extractedAt: "2024-01-15T10:30:00Z"
+                      format: "json"
+                      processingTime: 2341
+                shadcn_format:
+                  summary: shadcn/ui CSS format response
+                  value:
+                    success: true
+                    data:
+                      css: |
+                        :root {
+                          --primary: 212 92% 45%;
+                          --primary-foreground: 0 0% 100%;
+                          --secondary: 210 40% 96%;
+                          --secondary-foreground: 222 84% 5%;
+                        }
+                        .dark {
+                          --primary: 212 92% 55%;
+                          --primary-foreground: 222 84% 5%;
+                        }
+                    meta:
+                      url: "https://github.com"
+                      format: "shadcn"
+                      processingTime: 1523
+        '400':
+          description: Bad request - invalid parameters
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiError'
+              example:
+                success: false
+                error:
+                  code: "INVALID_URL"
+                  message: "The provided URL is not valid"
+                timestamp: "2024-01-15T10:30:00Z"
+                requestId: "550e8400-e29b-41d4-a716-446655440000"
+        '401':
+          description: Unauthorized - invalid or missing API key
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiError'
+        '429':
+          description: Rate limit exceeded
+          headers:
+            X-RateLimit-Reset:
+              schema:
+                type: string
+                format: date-time
+            Retry-After:
+              schema:
+                type: integer
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiError'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiError'
+
+  /health:
+    get:
+      summary: Health check endpoint
+      description: Check the health and status of the API service
+      operationId: healthCheck
+      tags:
+        - System
+      security: []
+      responses:
+        '200':
+          description: Service is healthy
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HealthCheck'
+              example:
+                status: "healthy"
+                timestamp: "2024-01-15T10:30:00Z"
+                version: "1.0.0"
+                uptime: 86400
+                memory:
+                  used: 128000000
+                  total: 512000000
+                  percentage: 25
+                apiKeys:
+                  total: 15
+                  active: 12
+
+  /usage:
+    get:
+      summary: Get usage statistics for your API key
+      description: Retrieve detailed usage statistics and rate limit information for your API key
+      operationId: getUsageStats
+      tags:
+        - Usage
+      security:
+        - ApiKeyAuth: []
+        - BearerAuth: []
+        - QueryAuth: []
+      responses:
+        '200':
+          description: Usage statistics retrieved successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UsageStats'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiError'
+
+  /admin/keys:
+    get:
+      summary: List all API keys (Admin only)
+      description: Retrieve a list of all API keys in the system
+      operationId: listApiKeys
+      tags:
+        - Admin
+      security:
+        - ApiKeyAuth: []
+        - BearerAuth: []
+      responses:
+        '200':
+          description: API keys retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/ApiKey'
+        '403':
+          description: Admin access required
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiError'
+    
+    post:
+      summary: Create a new API key (Admin only)
+      description: Create a new API key with specified permissions
+      operationId: createApiKey
+      tags:
+        - Admin
+      security:
+        - ApiKeyAuth: []
+        - BearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - name
+              properties:
+                name:
+                  type: string
+                  description: Human-readable name for the API key
+                tier:
+                  type: string
+                  enum: [basic, premium, enterprise]
+                  default: basic
+                  description: Rate limit tier for the API key
+            example:
+              name: "Customer Portal Integration"
+              tier: "premium"
+      responses:
+        '201':
+          description: API key created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  data:
+                    $ref: '#/components/schemas/ApiKey'
+        '403':
+          description: Admin access required
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiError'
+
+tags:
+  - name: Analysis
+    description: Website analysis and token extraction
+  - name: System
+    description: System health and status endpoints
+  - name: Usage
+    description: API usage tracking and statistics
+  - name: Admin
+    description: Administrative endpoints (admin access required)
+
+externalDocs:
+  description: Get-Site-Styles Documentation
+  url: https://docs.get-site-styles.com 

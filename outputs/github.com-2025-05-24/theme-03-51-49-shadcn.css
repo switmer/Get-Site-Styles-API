@@ -1,0 +1,65 @@
+:root {
+  --radius: 0.5rem;
+  --background: 0 0% 100%;
+  --card: 0 0% 100%;
+  --popover: 0 0% 100%;
+  --foreground: 213 13% 14%;
+  --card-foreground: 213 13% 14%;
+  --popover-foreground: 213 13% 14%;
+  --primary: 212 92% 45%;
+  --primary-foreground: 0 0% 100%;
+  --ring: 212 92% 45%;
+  --secondary: 217 97% 30%;
+  --secondary-foreground: 0 0% 100%;
+  --accent: 3 93% 63%;
+  --accent-foreground: 240 2% 14%;
+  --muted: 213 11% 16%;
+  --muted-foreground: 0 0% 100%;
+  --destructive: 354 81% 35%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 208 19% 85%;
+  --input: 208 19% 85%;
+
+  /* Additional Brand Colors */
+  --brand-1: 0 0% 0%;
+
+  /* Button Colors */
+  --button-1: 137 56% 41%;
+  --button-2: 137 56% 46%;
+  --button-3: 213 13% 14%;
+  --button-4: 210 24% 93%;
+  --button-5: 0 0% 100%;
+}
+
+.dark {
+  --radius: 0.5rem;
+  --background: 0 0% 15%;
+  --card: 0 0% 15%;
+  --popover: 0 0% 15%;
+  --foreground: 216 13% 85%;
+  --card-foreground: 216 13% 85%;
+  --popover-foreground: 216 13% 85%;
+  --primary: 212 92% 45%;
+  --ring: 212 92% 45%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 217 97% 30%;
+  --secondary-foreground: 0 0% 100%;
+  --accent: 3 93% 63%;
+  --accent-foreground: 240 2% 14%;
+  --destructive: 354 81% 35%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 207 19% 34%;
+  --input: 207 19% 34%;
+  --muted: 214 11% 25%;
+  --muted-foreground: 0 0% 100%;
+
+  /* Additional Brand Colors */
+  --brand-1: 0 0% 0%;
+
+  /* Button Colors */
+  --button-1: 137 56% 41%;
+  --button-2: 137 56% 46%;
+  --button-3: 213 13% 14%;
+  --button-4: 210 24% 93%;
+  --button-5: 0 0% 100%;
+}

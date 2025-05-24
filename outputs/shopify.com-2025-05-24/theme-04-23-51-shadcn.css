@@ -1,0 +1,85 @@
+:root {
+  --radius: 0.5rem;
+  --background: #000000;
+  --card: #000000;
+  --popover: #000000;
+  --foreground: #141414;
+  --card-foreground: #141414;
+  --popover-foreground: #141414;
+  --primary: #02f0ff;
+  --primary-foreground: #141414;
+  --ring: #02f0ff;
+  --secondary: #000a1e;
+  --secondary-foreground: #ffffff;
+  --accent: #3b82f6;
+  --accent-foreground: #141414;
+  --muted: #18181b;
+  --muted-foreground: #ffffff;
+  --destructive: #ff4500;
+  --destructive-foreground: #141414;
+  --border: #E0E0E0;
+  --input: #E0E0E0;
+
+  /* Layout Zone Colors */
+  --header-background: rgb(0 0 0/var(--tw-bg-opacity);
+  --header-foreground: #141414;
+  --footer-background: #093329;
+  --footer-foreground: #ffffff;
+  --section-background: #E0E0E0;
+  --section-foreground: #141414;
+
+  /* Additional Brand Colors */
+  --brand-1: rgb(0 0 0/var(--tw-bg-opacity);
+  --brand-2: rgb(6 26 28/var(--tw-bg-opacity);
+  --brand-3: rgb(82 82 91/var(--tw-bg-opacity);
+
+  /* Button Colors */
+  --button-1: rgb(0 0 0/var(--tw-bg-opacity);
+  --button-2: rgb(255 255 255/var(--tw-bg-opacity);
+  --button-3: rgb(212 212 216/var(--tw-bg-opacity);
+  --button-4: #244749;
+  --button-5: #182e2f;
+}
+
+.dark {
+  --radius: 0.5rem;
+  --background: #000000;
+  --card: #000000;
+  --popover: #000000;
+  --foreground: #ffffff;
+  --card-foreground: #ffffff;
+  --popover-foreground: #ffffff;
+  --primary: #00eeff;
+  --ring: #00eeff;
+  --primary-foreground: #ffffff;
+  --secondary: #002c85;
+  --secondary-foreground: #ffffff;
+  --accent: #3c83f6;
+  --accent-foreground: #141414;
+  --destructive: #ff4400;
+  --destructive-foreground: #ffffff;
+  --border: #595959;
+  --input: #595959;
+  --muted: #3c3c44;
+  --muted-foreground: #ffffff;
+
+  /* Layout Zone Colors */
+  --header-background: rgb(0 0 0/var(--tw-bg-opacity);
+  --header-foreground: #141414;
+  --footer-background: #093329;
+  --footer-foreground: #ffffff;
+  --section-background: #E0E0E0;
+  --section-foreground: #141414;
+
+  /* Additional Brand Colors */
+  --brand-1: rgb(0 0 0/var(--tw-bg-opacity);
+  --brand-2: rgb(6 26 28/var(--tw-bg-opacity);
+  --brand-3: rgb(82 82 91/var(--tw-bg-opacity);
+
+  /* Button Colors */
+  --button-1: rgb(0 0 0/var(--tw-bg-opacity);
+  --button-2: rgb(255 255 255/var(--tw-bg-opacity);
+  --button-3: rgb(212 212 216/var(--tw-bg-opacity);
+  --button-4: #244749;
+  --button-5: #182e2f;
+}

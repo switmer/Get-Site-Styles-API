@@ -1,0 +1,81 @@
+:root {
+  --radius: 0.5rem;
+  --background: 224 71% 4%;
+  --card: 224 71% 4%;
+  --popover: 224 71% 4%;
+  --foreground: 220 13% 91%;
+  --card-foreground: 220 13% 91%;
+  --popover-foreground: 220 13% 91%;
+  --primary: 199 100% 47%;
+  --primary-foreground: 0 0% 100%;
+  --ring: 199 100% 47%;
+  --secondary: 196 100% 50%;
+  --secondary-foreground: 240 2% 14%;
+  --accent: 327 95% 69%;
+  --accent-foreground: 240 2% 14%;
+  --muted: 217 21% 27%;
+  --muted-foreground: 0 0% 100%;
+  --destructive: 357 96% 58%;
+  --destructive-foreground: 240 2% 14%;
+  --border: 218 14% 84%;
+  --input: 218 14% 84%;
+
+  /* Layout Zone Colors */
+  --footer-background: #ffffff;
+  --footer-foreground: #000000;
+  --section-background: #ffffff;
+  --section-foreground: #000000;
+
+  /* Additional Brand Colors */
+  --brand-1: #ffffff;
+  --brand-2: #030712;
+  --brand-3: #374151;
+  --brand-4: #111827;
+  --brand-5: #000000;
+  --brand-accent-1: #9ca3af;
+
+  /* Button Colors */
+  --button-1: #0000;
+  --button-2: #ffffff;
+}
+
+.dark {
+  --radius: 0.5rem;
+  --background: 223 70% 4%;
+  --card: 223 70% 4%;
+  --popover: 223 70% 4%;
+  --foreground: 220 13% 91%;
+  --card-foreground: 220 13% 91%;
+  --popover-foreground: 220 13% 91%;
+  --primary: 199 100% 47%;
+  --ring: 199 100% 47%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 196 100% 50%;
+  --secondary-foreground: 0 0% 100%;
+  --accent: 327 95% 69%;
+  --accent-foreground: 240 2% 14%;
+  --destructive: 357 96% 58%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 220 14% 34%;
+  --input: 220 14% 34%;
+  --muted: 216 21% 25%;
+  --muted-foreground: 0 0% 100%;
+
+  /* Layout Zone Colors */
+  --footer-background: #ffffff;
+  --footer-foreground: #000000;
+  --section-background: #ffffff;
+  --section-foreground: #000000;
+
+  /* Additional Brand Colors */
+  --brand-1: #ffffff;
+  --brand-2: #030712;
+  --brand-3: #374151;
+  --brand-4: #111827;
+  --brand-5: #000000;
+  --brand-accent-1: #9ca3af;
+
+  /* Button Colors */
+  --button-1: #0000;
+  --button-2: #ffffff;
+}

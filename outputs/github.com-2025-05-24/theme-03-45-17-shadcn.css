@@ -1,0 +1,93 @@
+:root {
+  --radius: 0.5rem;
+  --background: 0 0% 100%;
+  --card: 0 0% 100%;
+  --popover: 0 0% 100%;
+  --foreground: 213 13% 14%;
+  --card-foreground: 213 13% 14%;
+  --popover-foreground: 213 13% 14%;
+  --primary: 212 92% 45%;
+  --primary-foreground: 0 0% 100%;
+  --ring: 212 92% 45%;
+  --secondary: 217 97% 30%;
+  --secondary-foreground: 0 0% 100%;
+  --accent: 3 93% 63%;
+  --accent-foreground: 240 2% 14%;
+  --muted: 213 11% 16%;
+  --muted-foreground: 0 0% 100%;
+  --destructive: 354 81% 35%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 208 19% 85%;
+  --input: 208 19% 85%;
+
+  /* Layout Zone Colors */
+  --header-background: #000000;
+  --header-foreground: #000000;
+  --hero-background: #000000;
+  --hero-foreground: #000000;
+  --footer-background: #000000;
+  --footer-foreground: #000000;
+  --section-background: #000000;
+  --section-foreground: #000000;
+
+  /* Additional Brand Colors */
+  --brand-1: #000000;
+  --brand-2: #000000;
+  --brand-accent-1: #34b759;
+  --brand-accent-2: #2ea44f;
+  --brand-accent-3: #34b759;
+
+  /* Button Colors */
+  --button-1: #34b759;
+  --button-2: #2ea44f;
+  --button-3: #2ea44f;
+  --button-4: #34b759;
+  --button-5: #2ea44f;
+}
+
+.dark {
+  --radius: 0.5rem;
+  --background: 0 0% 15%;
+  --card: 0 0% 15%;
+  --popover: 0 0% 15%;
+  --foreground: 216 13% 85%;
+  --card-foreground: 216 13% 85%;
+  --popover-foreground: 216 13% 85%;
+  --primary: 212 92% 45%;
+  --ring: 212 92% 45%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 217 97% 30%;
+  --secondary-foreground: 0 0% 100%;
+  --accent: 3 93% 63%;
+  --accent-foreground: 240 2% 14%;
+  --destructive: 354 81% 35%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 207 19% 34%;
+  --input: 207 19% 34%;
+  --muted: 214 11% 25%;
+  --muted-foreground: 0 0% 100%;
+
+  /* Layout Zone Colors */
+  --header-background: #000000;
+  --header-foreground: #000000;
+  --hero-background: #000000;
+  --hero-foreground: #000000;
+  --footer-background: #000000;
+  --footer-foreground: #000000;
+  --section-background: #000000;
+  --section-foreground: #000000;
+
+  /* Additional Brand Colors */
+  --brand-1: #000000;
+  --brand-2: #000000;
+  --brand-accent-1: #34b759;
+  --brand-accent-2: #2ea44f;
+  --brand-accent-3: #34b759;
+
+  /* Button Colors */
+  --button-1: #34b759;
+  --button-2: #2ea44f;
+  --button-3: #2ea44f;
+  --button-4: #34b759;
+  --button-5: #2ea44f;
+}

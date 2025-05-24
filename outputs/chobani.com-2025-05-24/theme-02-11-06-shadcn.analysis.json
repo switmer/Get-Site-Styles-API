@@ -1,0 +1,189 @@
+{
+  "meta": {
+    "source": "https://chobani.com",
+    "extractedAt": "2025-05-24T02:11:06.508Z",
+    "totalTokens": {
+      "customProperties": 0,
+      "colors": 750,
+      "fontSizes": 165,
+      "fontFamilies": 87,
+      "fontWeights": 18,
+      "lineHeights": 108,
+      "letterSpacings": 99,
+      "spacing": 423,
+      "radii": 36,
+      "shadows": 24,
+      "gradients": 0,
+      "breakpoints": 468,
+      "zIndices": 9,
+      "transitions": 216,
+      "opacity": 123,
+      "aspectRatios": 0,
+      "borderWidths": 15,
+      "borderStyles": 24
+    },
+    "format": "shadcn",
+    "colorAnalysis": [
+      {
+        "color": "#EAE8E1",
+        "role": "primary",
+        "frequency": 204,
+        "lightness": 90,
+        "saturation": 18
+      },
+      {
+        "color": "#1976d2",
+        "role": "primary",
+        "frequency": 96,
+        "lightness": 46,
+        "saturation": 79
+      },
+      {
+        "color": "#1B3A32",
+        "role": "primary",
+        "frequency": 66,
+        "lightness": 17,
+        "saturation": 36
+      },
+      {
+        "color": "#8D9C98",
+        "role": "primary",
+        "frequency": 12,
+        "lightness": 58,
+        "saturation": 7
+      },
+      {
+        "color": "#fff",
+        "role": "background",
+        "frequency": 24,
+        "lightness": 100,
+        "saturation": 0
+      },
+      {
+        "color": "#d32f2f",
+        "role": "destructive",
+        "frequency": 12,
+        "lightness": 51,
+        "saturation": 65
+      }
+    ]
+  },
+  "css": ":root {\n  --background: #fff;\n  --foreground: #020817;\n  --card: #fff;\n  --card-foreground: #020817;\n  --popover: #fff;\n  --popover-foreground: #020817;\n  --primary: #1976d2;\n  --primary-foreground: #ffffff;\n  --secondary: #d32f2f;\n  --secondary-foreground: #0f172a;\n  --muted: #f1f5f9;\n  --muted-foreground: #64748b;\n  --accent: #d32f2f;\n  --accent-foreground: #0f172a;\n  --destructive: #d32f2f;\n  --destructive-foreground: #fef2f2;\n  --border: #e2e8f0;\n  --input: #e2e8f0;\n  --ring: #1976d2;\n  --radius: 0.5rem;\n}\n\n.dark {\n  --background: #020817;\n  --foreground: #f8fafc;\n  --card: #020817;\n  --card-foreground: #f8fafc;\n  --popover: #020817;\n  --popover-foreground: #f8fafc;\n  --primary: #1976d2;\n  --primary-foreground: #f8fafc;\n  --secondary: #1e293b;\n  --secondary-foreground: #f8fafc;\n  --muted: #1e293b;\n  --muted-foreground: #94a3b8;\n  --accent: #1e293b;\n  --accent-foreground: #f8fafc;\n  --destructive: #d32f2f;\n  --destructive-foreground: #f8fafc;\n  --border: #1e293b;\n  --input: #1e293b;\n  --ring: #1976d2;\n  --radius: 0.5rem;\n}",
+  "theme": {
+    "light": {
+      "--background": "#fff",
+      "--foreground": "#020817",
+      "--card": "#fff",
+      "--card-foreground": "#020817",
+      "--popover": "#fff",
+      "--popover-foreground": "#020817",
+      "--primary": "#1976d2",
+      "--primary-foreground": "#ffffff",
+      "--secondary": "#d32f2f",
+      "--secondary-foreground": "#0f172a",
+      "--muted": "#f1f5f9",
+      "--muted-foreground": "#64748b",
+      "--accent": "#d32f2f",
+      "--accent-foreground": "#0f172a",
+      "--destructive": "#d32f2f",
+      "--destructive-foreground": "#fef2f2",
+      "--border": "#e2e8f0",
+      "--input": "#e2e8f0",
+      "--ring": "#1976d2",
+      "--radius": "0.5rem"
+    },
+    "dark": {
+      "--background": "#020817",
+      "--foreground": "#f8fafc",
+      "--card": "#020817",
+      "--card-foreground": "#f8fafc",
+      "--popover": "#020817",
+      "--popover-foreground": "#f8fafc",
+      "--primary": "#1976d2",
+      "--primary-foreground": "#f8fafc",
+      "--secondary": "#1e293b",
+      "--secondary-foreground": "#f8fafc",
+      "--muted": "#1e293b",
+      "--muted-foreground": "#94a3b8",
+      "--accent": "#1e293b",
+      "--accent-foreground": "#f8fafc",
+      "--destructive": "#d32f2f",
+      "--destructive-foreground": "#f8fafc",
+      "--border": "#1e293b",
+      "--input": "#1e293b",
+      "--ring": "#1976d2",
+      "--radius": "0.5rem"
+    }
+  },
+  "tokens": {
+    "colors": [
+      "#1976d2",
+      "#fff",
+      "#1B3A32",
+      "rgba(0, 0, 0, 0.87)",
+      "rgb(27,58,50, 30%)",
+      "rgba(25, 118, 210, 0.5)",
+      "rgba(25, 118, 210, 0.04)",
+      "rgba(0, 0, 0, 0.26)",
+      "rgba(0, 0, 0, 0.12)",
+      "rgba(0, 0, 0, 0.54)",
+      "#1A3C34",
+      "#EAE8E1",
+      "rgba(0, 0, 0, 0.38)",
+      "#d32f2f",
+      "rgba(0, 0, 0, 0.42)",
+      "rgba(0, 0, 0, 0.6)",
+      "rgba(0, 0, 0, 0.23)",
+      "#8D9C98",
+      "#1a3c34"
+    ],
+    "fontSizes": [
+      "1.4rem",
+      "1.2rem",
+      "1rem",
+      "0.875rem",
+      "0.9rem",
+      "1.5rem",
+      "0.8125rem",
+      "0.8rem",
+      "0.75rem",
+      "20px"
+    ],
+    "spacing": [
+      "16px",
+      "24px",
+      "0px",
+      "0%",
+      "32px",
+      "1.875rem",
+      "20px",
+      "5px",
+      "15px",
+      "12px",
+      "18px",
+      "8px",
+      "10px",
+      "2rem",
+      "1.5rem",
+      "4px",
+      "3px",
+      "9px",
+      "11px",
+      "50px",
+      "40px",
+      "1px",
+      "8.5px",
+      "14px",
+      "1rem",
+      "0rem",
+      "0.5rem",
+      "1.25rem",
+      "2px",
+      "28px"
+    ],
+    "radii": [
+      "4px",
+      "50%"
+    ]
+  }
+}

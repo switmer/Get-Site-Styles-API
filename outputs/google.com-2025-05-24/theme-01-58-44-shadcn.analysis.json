@@ -1,0 +1,187 @@
+{
+  "meta": {
+    "source": "https://www.google.com",
+    "extractedAt": "2025-05-24T01:58:44.255Z",
+    "totalTokens": {
+      "customProperties": 0,
+      "colors": 34,
+      "fontSizes": 3,
+      "fontFamilies": 2,
+      "fontWeights": 1,
+      "lineHeights": 2,
+      "letterSpacings": 0,
+      "spacing": 13,
+      "radii": 0,
+      "shadows": 0,
+      "gradients": 0,
+      "breakpoints": 0,
+      "zIndices": 0,
+      "transitions": 0,
+      "opacity": 0,
+      "aspectRatios": 0,
+      "borderWidths": 0,
+      "borderStyles": 0
+    },
+    "format": "shadcn",
+    "colorAnalysis": [
+      {
+        "color": "#1967d2",
+        "role": "primary",
+        "frequency": 4,
+        "lightness": 46,
+        "saturation": 79
+      },
+      {
+        "color": "#681da8",
+        "role": "primary",
+        "frequency": 4,
+        "lightness": 39,
+        "saturation": 71
+      },
+      {
+        "color": "#00c",
+        "role": "primary",
+        "frequency": 2,
+        "lightness": 40,
+        "saturation": 100
+      },
+      {
+        "color": "#dd8e27",
+        "role": "primary",
+        "frequency": 2,
+        "lightness": 51,
+        "saturation": 73
+      },
+      {
+        "color": "#c9d7f1",
+        "role": "primary",
+        "frequency": 2,
+        "lightness": 87,
+        "saturation": 59
+      },
+      {
+        "color": "#dadce0",
+        "role": "primary",
+        "frequency": 6,
+        "lightness": 87,
+        "saturation": 9
+      },
+      {
+        "color": "#70757a",
+        "role": "primary",
+        "frequency": 4,
+        "lightness": 46,
+        "saturation": 4
+      },
+      {
+        "color": "#000",
+        "role": "background",
+        "frequency": 4,
+        "lightness": 0,
+        "saturation": 0
+      },
+      {
+        "color": "#fff",
+        "role": "background",
+        "frequency": 2,
+        "lightness": 100,
+        "saturation": 0
+      },
+      {
+        "color": "#f8f9fa",
+        "role": "background",
+        "frequency": 2,
+        "lightness": 98,
+        "saturation": 17
+      },
+      {
+        "color": "#900",
+        "role": "destructive",
+        "frequency": 2,
+        "lightness": 30,
+        "saturation": 100
+      }
+    ]
+  },
+  "css": ":root {\n  --background: #000;\n  --foreground: #020817;\n  --card: #000;\n  --card-foreground: #020817;\n  --popover: #000;\n  --popover-foreground: #020817;\n  --primary: #1967d2;\n  --primary-foreground: #ffffff;\n  --secondary: #f1f5f9;\n  --secondary-foreground: #0f172a;\n  --muted: #f1f5f9;\n  --muted-foreground: #64748b;\n  --accent: #f1f5f9;\n  --accent-foreground: #0f172a;\n  --destructive: #900;\n  --destructive-foreground: #fef2f2;\n  --border: #e2e8f0;\n  --input: #e2e8f0;\n  --ring: #1967d2;\n  --radius: 0.5rem;\n}\n\n.dark {\n  --background: #020817;\n  --foreground: #f8fafc;\n  --card: #020817;\n  --card-foreground: #f8fafc;\n  --popover: #020817;\n  --popover-foreground: #f8fafc;\n  --primary: #1967d2;\n  --primary-foreground: #f8fafc;\n  --secondary: #1e293b;\n  --secondary-foreground: #f8fafc;\n  --muted: #1e293b;\n  --muted-foreground: #94a3b8;\n  --accent: #1e293b;\n  --accent-foreground: #f8fafc;\n  --destructive: #900;\n  --destructive-foreground: #f8fafc;\n  --border: #1e293b;\n  --input: #1e293b;\n  --ring: #1967d2;\n  --radius: 0.5rem;\n}",
+  "theme": {
+    "light": {
+      "--background": "#000",
+      "--foreground": "#020817",
+      "--card": "#000",
+      "--card-foreground": "#020817",
+      "--popover": "#000",
+      "--popover-foreground": "#020817",
+      "--primary": "#1967d2",
+      "--primary-foreground": "#ffffff",
+      "--secondary": "#f1f5f9",
+      "--secondary-foreground": "#0f172a",
+      "--muted": "#f1f5f9",
+      "--muted-foreground": "#64748b",
+      "--accent": "#f1f5f9",
+      "--accent-foreground": "#0f172a",
+      "--destructive": "#900",
+      "--destructive-foreground": "#fef2f2",
+      "--border": "#e2e8f0",
+      "--input": "#e2e8f0",
+      "--ring": "#1967d2",
+      "--radius": "0.5rem"
+    },
+    "dark": {
+      "--background": "#020817",
+      "--foreground": "#f8fafc",
+      "--card": "#020817",
+      "--card-foreground": "#f8fafc",
+      "--popover": "#020817",
+      "--popover-foreground": "#f8fafc",
+      "--primary": "#1967d2",
+      "--primary-foreground": "#f8fafc",
+      "--secondary": "#1e293b",
+      "--secondary-foreground": "#f8fafc",
+      "--muted": "#1e293b",
+      "--muted-foreground": "#94a3b8",
+      "--accent": "#1e293b",
+      "--accent-foreground": "#f8fafc",
+      "--destructive": "#900",
+      "--destructive-foreground": "#f8fafc",
+      "--border": "#1e293b",
+      "--input": "#1e293b",
+      "--ring": "#1967d2",
+      "--radius": "0.5rem"
+    }
+  },
+  "tokens": {
+    "colors": [
+      "#c9d7f1",
+      "#00c",
+      "#dd8e27",
+      "#900",
+      "#1967d2",
+      "#fff",
+      "#000",
+      "#681da8",
+      "#f8f9fa",
+      "#dadce0",
+      "#70757a"
+    ],
+    "fontSizes": [
+      "13px",
+      "1px",
+      "11px"
+    ],
+    "spacing": [
+      "1px",
+      "7px",
+      ".5em",
+      "3px",
+      "8px",
+      "20px",
+      "4px",
+      "5px",
+      "2px",
+      "13px",
+      "12px"
+    ],
+    "radii": []
+  }
+}

@@ -1,0 +1,57 @@
+:root {
+  --background: #000;
+  --foreground: #020817;
+  --card: #000;
+  --card-foreground: #020817;
+  --popover: #000;
+  --popover-foreground: #020817;
+  --primary: #0099ff;
+  --primary-foreground: #ffffff;
+  --secondary: #323232;
+  --secondary-foreground: #0f172a;
+  --muted: #f1f5f9;
+  --muted-foreground: #64748b;
+  --accent: #323232;
+  --accent-foreground: #0f172a;
+  --destructive: #ef4444;
+  --destructive-foreground: #fef2f2;
+  --border: #e2e8f0;
+  --input: #e2e8f0;
+  --ring: #0099ff;
+  --radius: 0.5rem;
+
+  /* Additional Brand Colors */
+  --brand-1: rgb(0, 0, 0);
+
+  /* Button Colors */
+  --button-1: rgba(255, 255, 255, 0.1);
+}
+
+.dark {
+  --background: #020817;
+  --foreground: #f8fafc;
+  --card: #020817;
+  --card-foreground: #f8fafc;
+  --popover: #020817;
+  --popover-foreground: #f8fafc;
+  --primary: #0099ff;
+  --primary-foreground: #f8fafc;
+  --secondary: #1e293b;
+  --secondary-foreground: #f8fafc;
+  --muted: #1e293b;
+  --muted-foreground: #94a3b8;
+  --accent: #1e293b;
+  --accent-foreground: #f8fafc;
+  --destructive: #ef4444;
+  --destructive-foreground: #f8fafc;
+  --border: #1e293b;
+  --input: #1e293b;
+  --ring: #0099ff;
+  --radius: 0.5rem;
+
+  /* Additional Brand Colors */
+  --brand-1: rgb(0, 0, 0);
+
+  /* Button Colors */
+  --button-1: rgba(255, 255, 255, 0.1);
+}

@@ -1,0 +1,3273 @@
+{
+  "meta": {
+    "source": "https://dock411.com/",
+    "extractedAt": "2025-05-22T16:47:50.969Z",
+    "totalTokens": {
+      "customProperties": 93,
+      "colors": 287,
+      "fontSizes": 102,
+      "fontFamilies": 50,
+      "fontWeights": 54,
+      "lineHeights": 88,
+      "letterSpacings": 14,
+      "spacing": 509,
+      "radii": 35,
+      "shadows": 30,
+      "gradients": 40,
+      "breakpoints": 45,
+      "zIndices": 43,
+      "transitions": 66,
+      "opacity": 74,
+      "aspectRatios": 7,
+      "borderWidths": 4,
+      "borderStyles": 5
+    }
+  },
+  "tokens": {
+    "customProperties": {
+      "--navigation-layout-justification-setting": {
+        "original": "space-between",
+        "resolved": "space-between",
+        "references": 0
+      },
+      "--navigation-layout-direction": {
+        "original": "column",
+        "resolved": "column",
+        "references": 0
+      },
+      "--navigation-layout-wrap": {
+        "original": "nowrap",
+        "resolved": "nowrap",
+        "references": 0
+      },
+      "--navigation-layout-justify": {
+        "original": "space-between",
+        "resolved": "space-between",
+        "references": 0
+      },
+      "--navigation-layout-align": {
+        "original": "flex-end",
+        "resolved": "flex-end",
+        "references": 0
+      },
+      "--wp--preset--font-size--normal": {
+        "original": "16px",
+        "resolved": "16px",
+        "references": 1
+      },
+      "--wp--preset--font-size--huge": {
+        "original": "42px",
+        "resolved": "42px",
+        "references": 1
+      },
+      "--wp-admin--admin-bar--position-offset": {
+        "original": "0px",
+        "resolved": "0px",
+        "references": 0
+      },
+      "--dk-blue": {
+        "original": "#2d3542",
+        "resolved": "#2d3542",
+        "references": 27
+      },
+      "--orange": {
+        "original": "#FF8300",
+        "resolved": "#FF8300",
+        "references": 52
+      },
+      "--grey": {
+        "original": "#EDEEEF",
+        "resolved": "#EDEEEF",
+        "references": 3
+      },
+      "--white": {
+        "original": "#ffffff",
+        "resolved": "#ffffff",
+        "references": 37
+      },
+      "--dk-grey": {
+        "original": "#232731",
+        "resolved": "#232731",
+        "references": 6
+      },
+      "--blue": {
+        "original": "#24B6EB",
+        "resolved": "#24B6EB",
+        "references": 12
+      },
+      "--green": {
+        "original": "#49D65A",
+        "resolved": "#49D65A",
+        "references": 4
+      },
+      "--red": {
+        "original": "#EA1313",
+        "resolved": "#EA1313",
+        "references": 4
+      },
+      "--lt-grey": {
+        "original": "#f9f9fa",
+        "resolved": "#f9f9fa",
+        "references": 8
+      },
+      "--gp-search-modal-bg-color": {
+        "original": "var(--base-3)",
+        "resolved": "var(--base-3)",
+        "references": 0
+      },
+      "--gp-search-modal-text-color": {
+        "original": "var(--contrast)",
+        "resolved": "var(--contrast)",
+        "references": 0
+      },
+      "--gp-search-modal-overlay-bg-color": {
+        "original": "rgba(0,0,0,0.2)",
+        "resolved": "rgba(0,0,0,0.2)",
+        "references": 0
+      },
+      "--wp--preset--aspect-ratio--square": {
+        "original": "1",
+        "resolved": "1",
+        "references": 0
+      },
+      "--wp--preset--aspect-ratio--4-3": {
+        "original": "4/3",
+        "resolved": "4/3",
+        "references": 0
+      },
+      "--wp--preset--aspect-ratio--3-4": {
+        "original": "3/4",
+        "resolved": "3/4",
+        "references": 0
+      },
+      "--wp--preset--aspect-ratio--3-2": {
+        "original": "3/2",
+        "resolved": "3/2",
+        "references": 0
+      },
+      "--wp--preset--aspect-ratio--2-3": {
+        "original": "2/3",
+        "resolved": "2/3",
+        "references": 0
+      },
+      "--wp--preset--aspect-ratio--16-9": {
+        "original": "16/9",
+        "resolved": "16/9",
+        "references": 0
+      },
+      "--wp--preset--aspect-ratio--9-16": {
+        "original": "9/16",
+        "resolved": "9/16",
+        "references": 0
+      },
+      "--wp--preset--color--black": {
+        "original": "#000000",
+        "resolved": "#000000",
+        "references": 3
+      },
+      "--wp--preset--color--cyan-bluish-gray": {
+        "original": "#abb8c3",
+        "resolved": "#abb8c3",
+        "references": 3
+      },
+      "--wp--preset--color--white": {
+        "original": "var(--white)",
+        "resolved": "#ffffff",
+        "references": 3
+      },
+      "--wp--preset--color--pale-pink": {
+        "original": "#f78da7",
+        "resolved": "#f78da7",
+        "references": 3
+      },
+      "--wp--preset--color--vivid-red": {
+        "original": "#cf2e2e",
+        "resolved": "#cf2e2e",
+        "references": 3
+      },
+      "--wp--preset--color--luminous-vivid-orange": {
+        "original": "#ff6900",
+        "resolved": "#ff6900",
+        "references": 3
+      },
+      "--wp--preset--color--luminous-vivid-amber": {
+        "original": "#fcb900",
+        "resolved": "#fcb900",
+        "references": 3
+      },
+      "--wp--preset--color--light-green-cyan": {
+        "original": "#7bdcb5",
+        "resolved": "#7bdcb5",
+        "references": 3
+      },
+      "--wp--preset--color--vivid-green-cyan": {
+        "original": "#00d084",
+        "resolved": "#00d084",
+        "references": 3
+      },
+      "--wp--preset--color--pale-cyan-blue": {
+        "original": "#8ed1fc",
+        "resolved": "#8ed1fc",
+        "references": 3
+      },
+      "--wp--preset--color--vivid-cyan-blue": {
+        "original": "#0693e3",
+        "resolved": "#0693e3",
+        "references": 3
+      },
+      "--wp--preset--color--vivid-purple": {
+        "original": "#9b51e0",
+        "resolved": "#9b51e0",
+        "references": 3
+      },
+      "--wp--preset--color--dk-blue": {
+        "original": "var(--dk-blue)",
+        "resolved": "#2d3542",
+        "references": 0
+      },
+      "--wp--preset--color--orange": {
+        "original": "var(--orange)",
+        "resolved": "#FF8300",
+        "references": 0
+      },
+      "--wp--preset--color--grey": {
+        "original": "var(--grey)",
+        "resolved": "#EDEEEF",
+        "references": 0
+      },
+      "--wp--preset--color--dk-grey": {
+        "original": "var(--dk-grey)",
+        "resolved": "#232731",
+        "references": 0
+      },
+      "--wp--preset--color--blue": {
+        "original": "var(--blue)",
+        "resolved": "#24B6EB",
+        "references": 0
+      },
+      "--wp--preset--color--green": {
+        "original": "var(--green)",
+        "resolved": "#49D65A",
+        "references": 0
+      },
+      "--wp--preset--color--red": {
+        "original": "var(--red)",
+        "resolved": "#EA1313",
+        "references": 0
+      },
+      "--wp--preset--color--lt-grey": {
+        "original": "var(--lt-grey)",
+        "resolved": "#f9f9fa",
+        "references": 0
+      },
+      "--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple": {
+        "original": "linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%)",
+        "resolved": "linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%)",
+        "references": 1
+      },
+      "--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan": {
+        "original": "linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%)",
+        "resolved": "linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%)",
+        "references": 1
+      },
+      "--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange": {
+        "original": "linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%)",
+        "resolved": "linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%)",
+        "references": 1
+      },
+      "--wp--preset--gradient--luminous-vivid-orange-to-vivid-red": {
+        "original": "linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%)",
+        "resolved": "linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%)",
+        "references": 1
+      },
+      "--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray": {
+        "original": "linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%)",
+        "resolved": "linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%)",
+        "references": 1
+      },
+      "--wp--preset--gradient--cool-to-warm-spectrum": {
+        "original": "linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%)",
+        "resolved": "linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%)",
+        "references": 1
+      },
+      "--wp--preset--gradient--blush-light-purple": {
+        "original": "linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%)",
+        "resolved": "linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%)",
+        "references": 1
+      },
+      "--wp--preset--gradient--blush-bordeaux": {
+        "original": "linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%)",
+        "resolved": "linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%)",
+        "references": 1
+      },
+      "--wp--preset--gradient--luminous-dusk": {
+        "original": "linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%)",
+        "resolved": "linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%)",
+        "references": 1
+      },
+      "--wp--preset--gradient--pale-ocean": {
+        "original": "linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%)",
+        "resolved": "linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%)",
+        "references": 1
+      },
+      "--wp--preset--gradient--electric-grass": {
+        "original": "linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%)",
+        "resolved": "linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%)",
+        "references": 1
+      },
+      "--wp--preset--gradient--midnight": {
+        "original": "linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%)",
+        "resolved": "linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%)",
+        "references": 1
+      },
+      "--wp--preset--font-size--small": {
+        "original": "13px",
+        "resolved": "13px",
+        "references": 1
+      },
+      "--wp--preset--font-size--medium": {
+        "original": "20px",
+        "resolved": "20px",
+        "references": 1
+      },
+      "--wp--preset--font-size--large": {
+        "original": "36px",
+        "resolved": "36px",
+        "references": 1
+      },
+      "--wp--preset--font-size--x-large": {
+        "original": "42px",
+        "resolved": "42px",
+        "references": 1
+      },
+      "--wp--preset--spacing--20": {
+        "original": "0.44rem",
+        "resolved": "0.44rem",
+        "references": 0
+      },
+      "--wp--preset--spacing--30": {
+        "original": "0.67rem",
+        "resolved": "0.67rem",
+        "references": 0
+      },
+      "--wp--preset--spacing--40": {
+        "original": "1rem",
+        "resolved": "1rem",
+        "references": 0
+      },
+      "--wp--preset--spacing--50": {
+        "original": "1.5rem",
+        "resolved": "1.5rem",
+        "references": 0
+      },
+      "--wp--preset--spacing--60": {
+        "original": "2.25rem",
+        "resolved": "2.25rem",
+        "references": 0
+      },
+      "--wp--preset--spacing--70": {
+        "original": "3.38rem",
+        "resolved": "3.38rem",
+        "references": 0
+      },
+      "--wp--preset--spacing--80": {
+        "original": "5.06rem",
+        "resolved": "5.06rem",
+        "references": 0
+      },
+      "--wp--preset--shadow--natural": {
+        "original": "6px 6px 9px rgba(0, 0, 0, 0.2)",
+        "resolved": "6px 6px 9px rgba(0, 0, 0, 0.2)",
+        "references": 0
+      },
+      "--wp--preset--shadow--deep": {
+        "original": "12px 12px 50px rgba(0, 0, 0, 0.4)",
+        "resolved": "12px 12px 50px rgba(0, 0, 0, 0.4)",
+        "references": 0
+      },
+      "--wp--preset--shadow--sharp": {
+        "original": "6px 6px 0px rgba(0, 0, 0, 0.2)",
+        "resolved": "6px 6px 0px rgba(0, 0, 0, 0.2)",
+        "references": 0
+      },
+      "--wp--preset--shadow--outlined": {
+        "original": "6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1)",
+        "resolved": "6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1)",
+        "references": 0
+      },
+      "--wp--preset--shadow--crisp": {
+        "original": "6px 6px 0px rgba(0, 0, 0, 1)",
+        "resolved": "6px 6px 0px rgba(0, 0, 0, 1)",
+        "references": 0
+      },
+      "--active": {
+        "original": "var(--orange)",
+        "resolved": "#FF8300",
+        "references": 2
+      },
+      "--active-inner": {
+        "original": "var(--white)",
+        "resolved": "#ffffff",
+        "references": 3
+      },
+      "--focus": {
+        "original": "2px rgba(255 131 0 / 30%)",
+        "resolved": "2px rgba(255 131 0 / 30%)",
+        "references": 2
+      },
+      "--border": {
+        "original": "#ccc",
+        "resolved": "#ccc",
+        "references": 3
+      },
+      "--border-hover": {
+        "original": "var(--orange)",
+        "resolved": "#FF8300",
+        "references": 1
+      },
+      "--background": {
+        "original": "var(--white)",
+        "resolved": "#ffffff",
+        "references": 1
+      },
+      "--disabled": {
+        "original": "#F6F8FF",
+        "resolved": "#F6F8FF",
+        "references": 1
+      },
+      "--disabled-inner": {
+        "original": "#E1E6F9",
+        "resolved": "#E1E6F9",
+        "references": 1
+      },
+      "--b": {
+        "original": "var(--disabled-inner)",
+        "resolved": "#E1E6F9",
+        "references": 0
+      },
+      "--bc": {
+        "original": "var(--border-hover)",
+        "resolved": "#FF8300",
+        "references": 0
+      },
+      "--d-o": {
+        "original": ".3s",
+        "resolved": ".3s",
+        "references": 0
+      },
+      "--d-t": {
+        "original": ".6s",
+        "resolved": ".6s",
+        "references": 0
+      },
+      "--d-t-e": {
+        "original": "cubic-bezier(.2, .85, .32, 1.2)",
+        "resolved": "cubic-bezier(.2, .85, .32, 1.2)",
+        "references": 0
+      },
+      "--o": {
+        "original": "1",
+        "resolved": "1",
+        "references": 0
+      },
+      "--r": {
+        "original": "43deg",
+        "resolved": "43deg",
+        "references": 0
+      },
+      "--ab": {
+        "original": "var(--active-inner)",
+        "resolved": "#ffffff",
+        "references": 0
+      },
+      "--x": {
+        "original": "17px",
+        "resolved": "17px",
+        "references": 0
+      },
+      "--s": {
+        "original": ".5",
+        "resolved": ".5",
+        "references": 0
+      }
+    },
+    "colors": {
+      "values": [
+        "#40464d",
+        "#ddd",
+        "#949494",
+        "#000",
+        "#fff",
+        "#000000b3",
+        "#0000004d",
+        "#0000",
+        "#0006",
+        "#fffc",
+        "#5a5a5a40",
+        "#00000026",
+        "#f0f0f0",
+        "#ccc",
+        "#444",
+        "#f90",
+        "#1ea0c3",
+        "#0757fe",
+        "#0a7aff",
+        "#1e1f26",
+        "#02e49b",
+        "#e94c89",
+        "#4280ff",
+        "#f45800",
+        "#0866ff",
+        "#0461dd",
+        "#e65678",
+        "#24292d",
+        "#eceadd",
+        "#382110",
+        "#ea4434",
+        "#1d4fc4",
+        "#f00075",
+        "#e21b24",
+        "#0d66c2",
+        "#3288d4",
+        "#f6405f",
+        "#e60122",
+        "#ef4155",
+        "#ff4500",
+        "#0478d7",
+        "#fefc00",
+        "#ff5600",
+        "#1bd760",
+        "#2aabee",
+        "#011835",
+        "#6440a4",
+        "#1da1f2",
+        "#1eb7ea",
+        "#4680c2",
+        "#3499cd",
+        "#25d366",
+        "#d32422",
+        "#f3f4f5",
+        "#e9fbe5",
+        "#e7f5fe",
+        "#fcf0ef",
+        "#eee",
+        "#313131",
+        "#00d084",
+        "#0693e3",
+        "#34e2e4",
+        "#4721fb",
+        "#ab1dfe",
+        "#faaca8",
+        "#dad0ec",
+        "#fafae1",
+        "#67a671",
+        "#fdd79a",
+        "#004a59",
+        "#330968",
+        "#31cdcf",
+        "#020381",
+        "#2874fc",
+        "hsla(0,0%,100%,.75)",
+        "#333",
+        "rgba(0,0,0,.05)",
+        "rgba(0,0,0,.1)",
+        "#666",
+        "#55555e",
+        "#f1f1f1",
+        "#21759b",
+        "rgba(255,255,255,.7)",
+        "rgba(0,0,0,.7)",
+        "rgba(0,0,0,.6)",
+        "rgba(0,0,0,.9)",
+        "#636363",
+        "#ffffff",
+        "#303030",
+        "rgba( 0,0,0,0.4 )",
+        "rgba( 0,0,0,0.6 )",
+        "rgba(0,0,0,0.2)",
+        "rgba(237, 239, 240, 0.4)",
+        "rgba(255, 255, 255, 0.65)",
+        "#32373c",
+        "#000000",
+        "#abb8c3",
+        "#f78da7",
+        "#cf2e2e",
+        "#ff6900",
+        "#fcb900",
+        "#7bdcb5",
+        "#8ed1fc",
+        "#9b51e0",
+        "#999",
+        "rgb(255 131 0 / 20%)"
+      ],
+      "frequency": [
+        {
+          "value": "#fff",
+          "count": 69,
+          "prevalence": 24.04
+        },
+        {
+          "value": "#000",
+          "count": 21,
+          "prevalence": 7.32
+        },
+        {
+          "value": "#ffffff",
+          "count": 13,
+          "prevalence": 4.53
+        },
+        {
+          "value": "#0000",
+          "count": 11,
+          "prevalence": 3.83
+        },
+        {
+          "value": "rgba(237, 239, 240, 0.4)",
+          "count": 7,
+          "prevalence": 2.44
+        },
+        {
+          "value": "#949494",
+          "count": 4,
+          "prevalence": 1.39
+        },
+        {
+          "value": "#f0f0f0",
+          "count": 4,
+          "prevalence": 1.39
+        },
+        {
+          "value": "#ddd",
+          "count": 3,
+          "prevalence": 1.05
+        },
+        {
+          "value": "#fffc",
+          "count": 3,
+          "prevalence": 1.05
+        },
+        {
+          "value": "#444",
+          "count": 3,
+          "prevalence": 1.05
+        },
+        {
+          "value": "#333",
+          "count": 3,
+          "prevalence": 1.05
+        },
+        {
+          "value": "rgba(0,0,0,.05)",
+          "count": 3,
+          "prevalence": 1.05
+        },
+        {
+          "value": "#5a5a5a40",
+          "count": 2,
+          "prevalence": 0.7
+        },
+        {
+          "value": "#ccc",
+          "count": 2,
+          "prevalence": 0.7
+        },
+        {
+          "value": "#f90",
+          "count": 2,
+          "prevalence": 0.7
+        },
+        {
+          "value": "#1ea0c3",
+          "count": 2,
+          "prevalence": 0.7
+        },
+        {
+          "value": "#0757fe",
+          "count": 2,
+          "prevalence": 0.7
+        },
+        {
+          "value": "#0a7aff",
+          "count": 2,
+          "prevalence": 0.7
+        },
+        {
+          "value": "#1e1f26",
+          "count": 2,
+          "prevalence": 0.7
+        },
+        {
+          "value": "#02e49b",
+          "count": 2,
+          "prevalence": 0.7
+        },
+        {
+          "value": "#e94c89",
+          "count": 2,
+          "prevalence": 0.7
+        },
+        {
+          "value": "#4280ff",
+          "count": 2,
+          "prevalence": 0.7
+        },
+        {
+          "value": "#f45800",
+          "count": 2,
+          "prevalence": 0.7
+        },
+        {
+          "value": "#0866ff",
+          "count": 2,
+          "prevalence": 0.7
+        },
+        {
+          "value": "#0461dd",
+          "count": 2,
+          "prevalence": 0.7
+        },
+        {
+          "value": "#e65678",
+          "count": 2,
+          "prevalence": 0.7
+        },
+        {
+          "value": "#24292d",
+          "count": 2,
+          "prevalence": 0.7
+        },
+        {
+          "value": "#382110",
+          "count": 2,
+          "prevalence": 0.7
+        },
+        {
+          "value": "#ea4434",
+          "count": 2,
+          "prevalence": 0.7
+        },
+        {
+          "value": "#1d4fc4",
+          "count": 2,
+          "prevalence": 0.7
+        },
+        {
+          "value": "#f00075",
+          "count": 2,
+          "prevalence": 0.7
+        },
+        {
+          "value": "#e21b24",
+          "count": 2,
+          "prevalence": 0.7
+        },
+        {
+          "value": "#0d66c2",
+          "count": 2,
+          "prevalence": 0.7
+        },
+        {
+          "value": "#3288d4",
+          "count": 2,
+          "prevalence": 0.7
+        },
+        {
+          "value": "#f6405f",
+          "count": 2,
+          "prevalence": 0.7
+        },
+        {
+          "value": "#e60122",
+          "count": 2,
+          "prevalence": 0.7
+        },
+        {
+          "value": "#ef4155",
+          "count": 2,
+          "prevalence": 0.7
+        },
+        {
+          "value": "#ff4500",
+          "count": 2,
+          "prevalence": 0.7
+        },
+        {
+          "value": "#0478d7",
+          "count": 2,
+          "prevalence": 0.7
+        },
+        {
+          "value": "#ff5600",
+          "count": 2,
+          "prevalence": 0.7
+        },
+        {
+          "value": "#1bd760",
+          "count": 2,
+          "prevalence": 0.7
+        },
+        {
+          "value": "#2aabee",
+          "count": 2,
+          "prevalence": 0.7
+        },
+        {
+          "value": "#011835",
+          "count": 2,
+          "prevalence": 0.7
+        },
+        {
+          "value": "#6440a4",
+          "count": 2,
+          "prevalence": 0.7
+        },
+        {
+          "value": "#1da1f2",
+          "count": 2,
+          "prevalence": 0.7
+        },
+        {
+          "value": "#1eb7ea",
+          "count": 2,
+          "prevalence": 0.7
+        },
+        {
+          "value": "#4680c2",
+          "count": 2,
+          "prevalence": 0.7
+        },
+        {
+          "value": "#3499cd",
+          "count": 2,
+          "prevalence": 0.7
+        },
+        {
+          "value": "#25d366",
+          "count": 2,
+          "prevalence": 0.7
+        },
+        {
+          "value": "#d32422",
+          "count": 2,
+          "prevalence": 0.7
+        },
+        {
+          "value": "#f3f4f5",
+          "count": 2,
+          "prevalence": 0.7
+        },
+        {
+          "value": "#e9fbe5",
+          "count": 2,
+          "prevalence": 0.7
+        },
+        {
+          "value": "#e7f5fe",
+          "count": 2,
+          "prevalence": 0.7
+        },
+        {
+          "value": "#fcf0ef",
+          "count": 2,
+          "prevalence": 0.7
+        },
+        {
+          "value": "#eee",
+          "count": 2,
+          "prevalence": 0.7
+        },
+        {
+          "value": "#313131",
+          "count": 2,
+          "prevalence": 0.7
+        },
+        {
+          "value": "#00d084",
+          "count": 2,
+          "prevalence": 0.7
+        },
+        {
+          "value": "#0693e3",
+          "count": 2,
+          "prevalence": 0.7
+        },
+        {
+          "value": "rgba(0,0,0,.1)",
+          "count": 2,
+          "prevalence": 0.7
+        },
+        {
+          "value": "#32373c",
+          "count": 2,
+          "prevalence": 0.7
+        },
+        {
+          "value": "#000000",
+          "count": 2,
+          "prevalence": 0.7
+        },
+        {
+          "value": "#40464d",
+          "count": 1,
+          "prevalence": 0.35
+        },
+        {
+          "value": "#000000b3",
+          "count": 1,
+          "prevalence": 0.35
+        },
+        {
+          "value": "#0000004d",
+          "count": 1,
+          "prevalence": 0.35
+        },
+        {
+          "value": "#0006",
+          "count": 1,
+          "prevalence": 0.35
+        },
+        {
+          "value": "#00000026",
+          "count": 1,
+          "prevalence": 0.35
+        },
+        {
+          "value": "#eceadd",
+          "count": 1,
+          "prevalence": 0.35
+        },
+        {
+          "value": "#fefc00",
+          "count": 1,
+          "prevalence": 0.35
+        },
+        {
+          "value": "#34e2e4",
+          "count": 1,
+          "prevalence": 0.35
+        },
+        {
+          "value": "#4721fb",
+          "count": 1,
+          "prevalence": 0.35
+        },
+        {
+          "value": "#ab1dfe",
+          "count": 1,
+          "prevalence": 0.35
+        },
+        {
+          "value": "#faaca8",
+          "count": 1,
+          "prevalence": 0.35
+        },
+        {
+          "value": "#dad0ec",
+          "count": 1,
+          "prevalence": 0.35
+        },
+        {
+          "value": "#fafae1",
+          "count": 1,
+          "prevalence": 0.35
+        },
+        {
+          "value": "#67a671",
+          "count": 1,
+          "prevalence": 0.35
+        },
+        {
+          "value": "#fdd79a",
+          "count": 1,
+          "prevalence": 0.35
+        },
+        {
+          "value": "#004a59",
+          "count": 1,
+          "prevalence": 0.35
+        },
+        {
+          "value": "#330968",
+          "count": 1,
+          "prevalence": 0.35
+        },
+        {
+          "value": "#31cdcf",
+          "count": 1,
+          "prevalence": 0.35
+        },
+        {
+          "value": "#020381",
+          "count": 1,
+          "prevalence": 0.35
+        },
+        {
+          "value": "#2874fc",
+          "count": 1,
+          "prevalence": 0.35
+        },
+        {
+          "value": "hsla(0,0%,100%,.75)",
+          "count": 1,
+          "prevalence": 0.35
+        },
+        {
+          "value": "#666",
+          "count": 1,
+          "prevalence": 0.35
+        },
+        {
+          "value": "#55555e",
+          "count": 1,
+          "prevalence": 0.35
+        },
+        {
+          "value": "#f1f1f1",
+          "count": 1,
+          "prevalence": 0.35
+        },
+        {
+          "value": "#21759b",
+          "count": 1,
+          "prevalence": 0.35
+        },
+        {
+          "value": "rgba(255,255,255,.7)",
+          "count": 1,
+          "prevalence": 0.35
+        },
+        {
+          "value": "rgba(0,0,0,.7)",
+          "count": 1,
+          "prevalence": 0.35
+        },
+        {
+          "value": "rgba(0,0,0,.6)",
+          "count": 1,
+          "prevalence": 0.35
+        },
+        {
+          "value": "rgba(0,0,0,.9)",
+          "count": 1,
+          "prevalence": 0.35
+        },
+        {
+          "value": "#636363",
+          "count": 1,
+          "prevalence": 0.35
+        },
+        {
+          "value": "#303030",
+          "count": 1,
+          "prevalence": 0.35
+        },
+        {
+          "value": "rgba( 0,0,0,0.4 )",
+          "count": 1,
+          "prevalence": 0.35
+        },
+        {
+          "value": "rgba( 0,0,0,0.6 )",
+          "count": 1,
+          "prevalence": 0.35
+        },
+        {
+          "value": "rgba(0,0,0,0.2)",
+          "count": 1,
+          "prevalence": 0.35
+        },
+        {
+          "value": "rgba(255, 255, 255, 0.65)",
+          "count": 1,
+          "prevalence": 0.35
+        },
+        {
+          "value": "#abb8c3",
+          "count": 1,
+          "prevalence": 0.35
+        },
+        {
+          "value": "#f78da7",
+          "count": 1,
+          "prevalence": 0.35
+        },
+        {
+          "value": "#cf2e2e",
+          "count": 1,
+          "prevalence": 0.35
+        },
+        {
+          "value": "#ff6900",
+          "count": 1,
+          "prevalence": 0.35
+        },
+        {
+          "value": "#fcb900",
+          "count": 1,
+          "prevalence": 0.35
+        },
+        {
+          "value": "#7bdcb5",
+          "count": 1,
+          "prevalence": 0.35
+        },
+        {
+          "value": "#8ed1fc",
+          "count": 1,
+          "prevalence": 0.35
+        },
+        {
+          "value": "#9b51e0",
+          "count": 1,
+          "prevalence": 0.35
+        },
+        {
+          "value": "#999",
+          "count": 1,
+          "prevalence": 0.35
+        },
+        {
+          "value": "rgb(255 131 0 / 20%)",
+          "count": 1,
+          "prevalence": 0.35
+        }
+      ]
+    },
+    "fontSizes": {
+      "values": [
+        "1em",
+        ".875em",
+        "2em",
+        ".8em",
+        "13px",
+        ".75em",
+        ".8125em",
+        "1rem",
+        "2.25em",
+        "3em",
+        "8.4em",
+        ".5em",
+        ".7em",
+        "1.5em",
+        "1.125em",
+        ".65em",
+        "16px",
+        "24px",
+        "36px",
+        "48px",
+        "42px",
+        "2.625em",
+        "100%",
+        "17px",
+        "1.2em",
+        "35px",
+        "29px",
+        "20px",
+        "75%",
+        "125%",
+        ".875rem",
+        "15px",
+        "14px",
+        "25px",
+        "85%",
+        "32px",
+        "28px",
+        "12px",
+        "65px",
+        "30px",
+        "0.8em",
+        "26px",
+        "77.5%",
+        "8.7vw"
+      ],
+      "frequency": [
+        {
+          "value": "1em",
+          "count": 11,
+          "prevalence": 10.78
+        },
+        {
+          "value": "24px",
+          "count": 8,
+          "prevalence": 7.84
+        },
+        {
+          "value": ".875em",
+          "count": 6,
+          "prevalence": 5.88
+        },
+        {
+          "value": "20px",
+          "count": 6,
+          "prevalence": 5.88
+        },
+        {
+          "value": "15px",
+          "count": 6,
+          "prevalence": 5.88
+        },
+        {
+          "value": "13px",
+          "count": 4,
+          "prevalence": 3.92
+        },
+        {
+          "value": "16px",
+          "count": 4,
+          "prevalence": 3.92
+        },
+        {
+          "value": "36px",
+          "count": 4,
+          "prevalence": 3.92
+        },
+        {
+          "value": "1.5em",
+          "count": 3,
+          "prevalence": 2.94
+        },
+        {
+          "value": "42px",
+          "count": 3,
+          "prevalence": 2.94
+        },
+        {
+          "value": "75%",
+          "count": 3,
+          "prevalence": 2.94
+        },
+        {
+          "value": "14px",
+          "count": 3,
+          "prevalence": 2.94
+        },
+        {
+          "value": "2em",
+          "count": 2,
+          "prevalence": 1.96
+        },
+        {
+          "value": ".8em",
+          "count": 2,
+          "prevalence": 1.96
+        },
+        {
+          "value": ".8125em",
+          "count": 2,
+          "prevalence": 1.96
+        },
+        {
+          "value": "1.125em",
+          "count": 2,
+          "prevalence": 1.96
+        },
+        {
+          "value": "48px",
+          "count": 2,
+          "prevalence": 1.96
+        },
+        {
+          "value": "100%",
+          "count": 2,
+          "prevalence": 1.96
+        },
+        {
+          "value": "1.2em",
+          "count": 2,
+          "prevalence": 1.96
+        },
+        {
+          "value": "12px",
+          "count": 2,
+          "prevalence": 1.96
+        },
+        {
+          "value": "0.8em",
+          "count": 2,
+          "prevalence": 1.96
+        },
+        {
+          "value": ".75em",
+          "count": 1,
+          "prevalence": 0.98
+        },
+        {
+          "value": "1rem",
+          "count": 1,
+          "prevalence": 0.98
+        },
+        {
+          "value": "2.25em",
+          "count": 1,
+          "prevalence": 0.98
+        },
+        {
+          "value": "3em",
+          "count": 1,
+          "prevalence": 0.98
+        },
+        {
+          "value": "8.4em",
+          "count": 1,
+          "prevalence": 0.98
+        },
+        {
+          "value": ".5em",
+          "count": 1,
+          "prevalence": 0.98
+        },
+        {
+          "value": ".7em",
+          "count": 1,
+          "prevalence": 0.98
+        },
+        {
+          "value": ".65em",
+          "count": 1,
+          "prevalence": 0.98
+        },
+        {
+          "value": "2.625em",
+          "count": 1,
+          "prevalence": 0.98
+        },
+        {
+          "value": "17px",
+          "count": 1,
+          "prevalence": 0.98
+        },
+        {
+          "value": "35px",
+          "count": 1,
+          "prevalence": 0.98
+        },
+        {
+          "value": "29px",
+          "count": 1,
+          "prevalence": 0.98
+        },
+        {
+          "value": "125%",
+          "count": 1,
+          "prevalence": 0.98
+        },
+        {
+          "value": ".875rem",
+          "count": 1,
+          "prevalence": 0.98
+        },
+        {
+          "value": "25px",
+          "count": 1,
+          "prevalence": 0.98
+        },
+        {
+          "value": "85%",
+          "count": 1,
+          "prevalence": 0.98
+        },
+        {
+          "value": "32px",
+          "count": 1,
+          "prevalence": 0.98
+        },
+        {
+          "value": "28px",
+          "count": 1,
+          "prevalence": 0.98
+        },
+        {
+          "value": "65px",
+          "count": 1,
+          "prevalence": 0.98
+        },
+        {
+          "value": "30px",
+          "count": 1,
+          "prevalence": 0.98
+        },
+        {
+          "value": "26px",
+          "count": 1,
+          "prevalence": 0.98
+        },
+        {
+          "value": "77.5%",
+          "count": 1,
+          "prevalence": 0.98
+        },
+        {
+          "value": "8.7vw",
+          "count": 1,
+          "prevalence": 0.98
+        }
+      ]
+    },
+    "fontFamilies": {
+      "values": [
+        "inherit",
+        "serif",
+        "sans-serif",
+        "-apple-system",
+        "system-ui",
+        "BlinkMacSystemFont",
+        "Segoe UI",
+        "Helvetica",
+        "Arial",
+        "Apple Color Emoji",
+        "Segoe UI Emoji",
+        "Segoe UI Symbol",
+        "Source Sans Pro",
+        "Eurostar Black Extended",
+        "GP Premium"
+      ],
+      "frequency": [
+        {
+          "value": "inherit",
+          "count": 15,
+          "prevalence": 30
+        },
+        {
+          "value": "Eurostar Black Extended",
+          "count": 12,
+          "prevalence": 24
+        },
+        {
+          "value": "Source Sans Pro",
+          "count": 9,
+          "prevalence": 18
+        },
+        {
+          "value": "sans-serif",
+          "count": 3,
+          "prevalence": 6
+        },
+        {
+          "value": "serif",
+          "count": 1,
+          "prevalence": 2
+        },
+        {
+          "value": "-apple-system",
+          "count": 1,
+          "prevalence": 2
+        },
+        {
+          "value": "system-ui",
+          "count": 1,
+          "prevalence": 2
+        },
+        {
+          "value": "BlinkMacSystemFont",
+          "count": 1,
+          "prevalence": 2
+        },
+        {
+          "value": "Segoe UI",
+          "count": 1,
+          "prevalence": 2
+        },
+        {
+          "value": "Helvetica",
+          "count": 1,
+          "prevalence": 2
+        },
+        {
+          "value": "Arial",
+          "count": 1,
+          "prevalence": 2
+        },
+        {
+          "value": "Apple Color Emoji",
+          "count": 1,
+          "prevalence": 2
+        },
+        {
+          "value": "Segoe UI Emoji",
+          "count": 1,
+          "prevalence": 2
+        },
+        {
+          "value": "Segoe UI Symbol",
+          "count": 1,
+          "prevalence": 2
+        },
+        {
+          "value": "GP Premium",
+          "count": 1,
+          "prevalence": 2
+        }
+      ]
+    },
+    "fontWeights": {
+      "values": [
+        "400",
+        "inherit",
+        "700",
+        "100",
+        "300",
+        "600",
+        "900",
+        "bold"
+      ],
+      "frequency": [
+        {
+          "value": "400",
+          "count": 13,
+          "prevalence": 24.07
+        },
+        {
+          "value": "700",
+          "count": 13,
+          "prevalence": 24.07
+        },
+        {
+          "value": "900",
+          "count": 12,
+          "prevalence": 22.22
+        },
+        {
+          "value": "inherit",
+          "count": 9,
+          "prevalence": 16.67
+        },
+        {
+          "value": "600",
+          "count": 3,
+          "prevalence": 5.56
+        },
+        {
+          "value": "300",
+          "count": 2,
+          "prevalence": 3.7
+        },
+        {
+          "value": "100",
+          "count": 1,
+          "prevalence": 1.85
+        },
+        {
+          "value": "bold",
+          "count": 1,
+          "prevalence": 1.85
+        }
+      ]
+    },
+    "lineHeights": {
+      "values": [
+        "0",
+        "1.8",
+        "1.5",
+        "1.25",
+        "2",
+        "1.1",
+        "inherit",
+        ".68",
+        "1.6",
+        "1",
+        "normal",
+        "1.2em",
+        "60px",
+        "1.8em",
+        "20px",
+        "1em",
+        "50px",
+        "0.9em",
+        "21px"
+      ],
+      "frequency": [
+        {
+          "value": "0",
+          "count": 36,
+          "prevalence": 40.91
+        },
+        {
+          "value": "1.5",
+          "count": 9,
+          "prevalence": 10.23
+        },
+        {
+          "value": "inherit",
+          "count": 6,
+          "prevalence": 6.82
+        },
+        {
+          "value": "1.2em",
+          "count": 5,
+          "prevalence": 5.68
+        },
+        {
+          "value": "1em",
+          "count": 5,
+          "prevalence": 5.68
+        },
+        {
+          "value": "1",
+          "count": 4,
+          "prevalence": 4.55
+        },
+        {
+          "value": "normal",
+          "count": 4,
+          "prevalence": 4.55
+        },
+        {
+          "value": "60px",
+          "count": 4,
+          "prevalence": 4.55
+        },
+        {
+          "value": "1.8",
+          "count": 2,
+          "prevalence": 2.27
+        },
+        {
+          "value": "1.6",
+          "count": 2,
+          "prevalence": 2.27
+        },
+        {
+          "value": "50px",
+          "count": 2,
+          "prevalence": 2.27
+        },
+        {
+          "value": "0.9em",
+          "count": 2,
+          "prevalence": 2.27
+        },
+        {
+          "value": "2",
+          "count": 1,
+          "prevalence": 1.14
+        },
+        {
+          "value": "1.25",
+          "count": 1,
+          "prevalence": 1.14
+        },
+        {
+          "value": "1.1",
+          "count": 1,
+          "prevalence": 1.14
+        },
+        {
+          "value": ".68",
+          "count": 1,
+          "prevalence": 1.14
+        },
+        {
+          "value": "1.8em",
+          "count": 1,
+          "prevalence": 1.14
+        },
+        {
+          "value": "20px",
+          "count": 1,
+          "prevalence": 1.14
+        },
+        {
+          "value": "21px",
+          "count": 1,
+          "prevalence": 1.14
+        }
+      ]
+    },
+    "letterSpacings": {
+      "values": [
+        "inherit",
+        "2em",
+        "-0.04em"
+      ],
+      "frequency": [
+        {
+          "value": "-0.04em",
+          "count": 8,
+          "prevalence": 57.14
+        },
+        {
+          "value": "inherit",
+          "count": 5,
+          "prevalence": 35.71
+        },
+        {
+          "value": "2em",
+          "count": 1,
+          "prevalence": 7.14
+        }
+      ]
+    },
+    "spacing": {
+      "values": [
+        "1em",
+        ".5em",
+        ".667em",
+        "2px",
+        "1.333em",
+        ".25em",
+        "2em",
+        "1.75em",
+        "1.25em",
+        "2.375em",
+        "3.25em",
+        ".75em",
+        ".35em",
+        "1.4em",
+        "2rem",
+        ".44em",
+        "50%",
+        "42.85%",
+        "56.25%",
+        "75%",
+        "100%",
+        "177.77%",
+        "200%",
+        "1.5em",
+        "3em",
+        ".77em",
+        ".7em",
+        "10px",
+        "9px",
+        ".36em",
+        "8%",
+        "1px",
+        ".075em",
+        ".85em",
+        ".6em",
+        "1rem",
+        "20rem",
+        "20em",
+        "24px",
+        "46px",
+        "32px",
+        "8px",
+        ".05em",
+        ".1em",
+        "4em",
+        "6px",
+        "4px",
+        ".66667em",
+        "5px",
+        "15px",
+        "23px",
+        "14px",
+        "20px",
+        "40px",
+        "100vw",
+        "30px",
+        "3px",
+        "12px",
+        "0px",
+        "60px",
+        "85px",
+        "64px",
+        "16px",
+        "0.5em",
+        "0.25em",
+        "65px",
+        "7px",
+        "0.07em",
+        "17px",
+        "0.8em",
+        "1.5rem",
+        "6vw",
+        "1.55em"
+      ],
+      "frequency": [
+        {
+          "value": "1em",
+          "count": 48,
+          "prevalence": 9.43
+        },
+        {
+          "value": "20px",
+          "count": 45,
+          "prevalence": 8.84
+        },
+        {
+          "value": "10px",
+          "count": 42,
+          "prevalence": 8.25
+        },
+        {
+          "value": "40px",
+          "count": 39,
+          "prevalence": 7.66
+        },
+        {
+          "value": ".5em",
+          "count": 29,
+          "prevalence": 5.7
+        },
+        {
+          "value": "0.5em",
+          "count": 23,
+          "prevalence": 4.52
+        },
+        {
+          "value": "1.5em",
+          "count": 22,
+          "prevalence": 4.32
+        },
+        {
+          "value": "24px",
+          "count": 21,
+          "prevalence": 4.13
+        },
+        {
+          "value": "30px",
+          "count": 21,
+          "prevalence": 4.13
+        },
+        {
+          "value": "2em",
+          "count": 20,
+          "prevalence": 3.93
+        },
+        {
+          "value": "0px",
+          "count": 19,
+          "prevalence": 3.73
+        },
+        {
+          "value": "0.25em",
+          "count": 16,
+          "prevalence": 3.14
+        },
+        {
+          "value": "60px",
+          "count": 14,
+          "prevalence": 2.75
+        },
+        {
+          "value": "1.25em",
+          "count": 12,
+          "prevalence": 2.36
+        },
+        {
+          "value": ".25em",
+          "count": 9,
+          "prevalence": 1.77
+        },
+        {
+          "value": "8px",
+          "count": 8,
+          "prevalence": 1.57
+        },
+        {
+          "value": "2px",
+          "count": 6,
+          "prevalence": 1.18
+        },
+        {
+          "value": "15px",
+          "count": 6,
+          "prevalence": 1.18
+        },
+        {
+          "value": ".667em",
+          "count": 5,
+          "prevalence": 0.98
+        },
+        {
+          "value": "2.375em",
+          "count": 5,
+          "prevalence": 0.98
+        },
+        {
+          "value": "5px",
+          "count": 5,
+          "prevalence": 0.98
+        },
+        {
+          "value": "2rem",
+          "count": 4,
+          "prevalence": 0.79
+        },
+        {
+          "value": "1rem",
+          "count": 4,
+          "prevalence": 0.79
+        },
+        {
+          "value": "32px",
+          "count": 4,
+          "prevalence": 0.79
+        },
+        {
+          "value": "14px",
+          "count": 4,
+          "prevalence": 0.79
+        },
+        {
+          "value": "64px",
+          "count": 4,
+          "prevalence": 0.79
+        },
+        {
+          "value": "1.333em",
+          "count": 3,
+          "prevalence": 0.59
+        },
+        {
+          "value": ".75em",
+          "count": 3,
+          "prevalence": 0.59
+        },
+        {
+          "value": "100%",
+          "count": 3,
+          "prevalence": 0.59
+        },
+        {
+          "value": "1px",
+          "count": 3,
+          "prevalence": 0.59
+        },
+        {
+          "value": "20rem",
+          "count": 3,
+          "prevalence": 0.59
+        },
+        {
+          "value": "4px",
+          "count": 3,
+          "prevalence": 0.59
+        },
+        {
+          "value": "16px",
+          "count": 3,
+          "prevalence": 0.59
+        },
+        {
+          "value": "3.25em",
+          "count": 2,
+          "prevalence": 0.39
+        },
+        {
+          "value": ".35em",
+          "count": 2,
+          "prevalence": 0.39
+        },
+        {
+          "value": "1.4em",
+          "count": 2,
+          "prevalence": 0.39
+        },
+        {
+          "value": "50%",
+          "count": 2,
+          "prevalence": 0.39
+        },
+        {
+          "value": "3em",
+          "count": 2,
+          "prevalence": 0.39
+        },
+        {
+          "value": ".7em",
+          "count": 2,
+          "prevalence": 0.39
+        },
+        {
+          "value": "9px",
+          "count": 2,
+          "prevalence": 0.39
+        },
+        {
+          "value": ".6em",
+          "count": 2,
+          "prevalence": 0.39
+        },
+        {
+          "value": ".1em",
+          "count": 2,
+          "prevalence": 0.39
+        },
+        {
+          "value": ".66667em",
+          "count": 2,
+          "prevalence": 0.39
+        },
+        {
+          "value": "23px",
+          "count": 2,
+          "prevalence": 0.39
+        },
+        {
+          "value": "100vw",
+          "count": 2,
+          "prevalence": 0.39
+        },
+        {
+          "value": "7px",
+          "count": 2,
+          "prevalence": 0.39
+        },
+        {
+          "value": "1.75em",
+          "count": 1,
+          "prevalence": 0.2
+        },
+        {
+          "value": ".44em",
+          "count": 1,
+          "prevalence": 0.2
+        },
+        {
+          "value": "42.85%",
+          "count": 1,
+          "prevalence": 0.2
+        },
+        {
+          "value": "56.25%",
+          "count": 1,
+          "prevalence": 0.2
+        },
+        {
+          "value": "75%",
+          "count": 1,
+          "prevalence": 0.2
+        },
+        {
+          "value": "177.77%",
+          "count": 1,
+          "prevalence": 0.2
+        },
+        {
+          "value": "200%",
+          "count": 1,
+          "prevalence": 0.2
+        },
+        {
+          "value": ".77em",
+          "count": 1,
+          "prevalence": 0.2
+        },
+        {
+          "value": ".36em",
+          "count": 1,
+          "prevalence": 0.2
+        },
+        {
+          "value": "8%",
+          "count": 1,
+          "prevalence": 0.2
+        },
+        {
+          "value": ".075em",
+          "count": 1,
+          "prevalence": 0.2
+        },
+        {
+          "value": ".85em",
+          "count": 1,
+          "prevalence": 0.2
+        },
+        {
+          "value": "20em",
+          "count": 1,
+          "prevalence": 0.2
+        },
+        {
+          "value": "46px",
+          "count": 1,
+          "prevalence": 0.2
+        },
+        {
+          "value": ".05em",
+          "count": 1,
+          "prevalence": 0.2
+        },
+        {
+          "value": "4em",
+          "count": 1,
+          "prevalence": 0.2
+        },
+        {
+          "value": "6px",
+          "count": 1,
+          "prevalence": 0.2
+        },
+        {
+          "value": "3px",
+          "count": 1,
+          "prevalence": 0.2
+        },
+        {
+          "value": "12px",
+          "count": 1,
+          "prevalence": 0.2
+        },
+        {
+          "value": "85px",
+          "count": 1,
+          "prevalence": 0.2
+        },
+        {
+          "value": "65px",
+          "count": 1,
+          "prevalence": 0.2
+        },
+        {
+          "value": "0.07em",
+          "count": 1,
+          "prevalence": 0.2
+        },
+        {
+          "value": "17px",
+          "count": 1,
+          "prevalence": 0.2
+        },
+        {
+          "value": "0.8em",
+          "count": 1,
+          "prevalence": 0.2
+        },
+        {
+          "value": "1.5rem",
+          "count": 1,
+          "prevalence": 0.2
+        },
+        {
+          "value": "6vw",
+          "count": 1,
+          "prevalence": 0.2
+        },
+        {
+          "value": "1.55em",
+          "count": 1,
+          "prevalence": 0.2
+        }
+      ]
+    },
+    "radii": {
+      "values": [
+        "9999px",
+        "1.5em",
+        "2em",
+        "8px",
+        "4px",
+        "50%",
+        "3px",
+        "12px",
+        "5px",
+        "20%",
+        "2px",
+        "100%",
+        "7px",
+        "11px"
+      ],
+      "frequency": [
+        {
+          "value": "2em",
+          "count": 7,
+          "prevalence": 20
+        },
+        {
+          "value": "50%",
+          "count": 7,
+          "prevalence": 20
+        },
+        {
+          "value": "9999px",
+          "count": 6,
+          "prevalence": 17.14
+        },
+        {
+          "value": "2px",
+          "count": 3,
+          "prevalence": 8.57
+        },
+        {
+          "value": "1.5em",
+          "count": 2,
+          "prevalence": 5.71
+        },
+        {
+          "value": "4px",
+          "count": 2,
+          "prevalence": 5.71
+        },
+        {
+          "value": "8px",
+          "count": 1,
+          "prevalence": 2.86
+        },
+        {
+          "value": "3px",
+          "count": 1,
+          "prevalence": 2.86
+        },
+        {
+          "value": "12px",
+          "count": 1,
+          "prevalence": 2.86
+        },
+        {
+          "value": "5px",
+          "count": 1,
+          "prevalence": 2.86
+        },
+        {
+          "value": "20%",
+          "count": 1,
+          "prevalence": 2.86
+        },
+        {
+          "value": "100%",
+          "count": 1,
+          "prevalence": 2.86
+        },
+        {
+          "value": "7px",
+          "count": 1,
+          "prevalence": 2.86
+        },
+        {
+          "value": "11px",
+          "count": 1,
+          "prevalence": 2.86
+        }
+      ]
+    },
+    "shadows": {
+      "values": [
+        "none",
+        "0 0 1.5px #000",
+        "0 0 0 5px #19f",
+        "0 0 2px 2px rgba(0,0,0,.6)",
+        "1px 1px 0 rgba(0,0,0,.1)",
+        "-1px 1px 0 rgba(0,0,0,.1)",
+        "0 0 20px #111",
+        "0 0 4px #000",
+        "0 2px 2px -2px rgba(0, 0, 0, .2)",
+        "0 16px 32px 0 rgba(0, 0, 0, 0.1)",
+        "0 2px 2px -2px rgba(0,0,0,.2)",
+        "0 16px 32px 0 rgb(0 0 0 / 10%)",
+        "0 0 0 var(--focus)",
+        "-597px 0 0 var(--white)",
+        "597px 0 0 var(--white)"
+      ],
+      "frequency": [
+        {
+          "value": "none",
+          "count": 9,
+          "prevalence": 30
+        },
+        {
+          "value": "0 16px 32px 0 rgba(0, 0, 0, 0.1)",
+          "count": 4,
+          "prevalence": 13.33
+        },
+        {
+          "value": "0 0 20px #111",
+          "count": 3,
+          "prevalence": 10
+        },
+        {
+          "value": "0 0 4px #000",
+          "count": 2,
+          "prevalence": 6.67
+        },
+        {
+          "value": "0 0 0 var(--focus)",
+          "count": 2,
+          "prevalence": 6.67
+        },
+        {
+          "value": "0 0 1.5px #000",
+          "count": 1,
+          "prevalence": 3.33
+        },
+        {
+          "value": "0 0 0 5px #19f",
+          "count": 1,
+          "prevalence": 3.33
+        },
+        {
+          "value": "0 0 2px 2px rgba(0,0,0,.6)",
+          "count": 1,
+          "prevalence": 3.33
+        },
+        {
+          "value": "1px 1px 0 rgba(0,0,0,.1)",
+          "count": 1,
+          "prevalence": 3.33
+        },
+        {
+          "value": "-1px 1px 0 rgba(0,0,0,.1)",
+          "count": 1,
+          "prevalence": 3.33
+        },
+        {
+          "value": "0 2px 2px -2px rgba(0, 0, 0, .2)",
+          "count": 1,
+          "prevalence": 3.33
+        },
+        {
+          "value": "0 2px 2px -2px rgba(0,0,0,.2)",
+          "count": 1,
+          "prevalence": 3.33
+        },
+        {
+          "value": "0 16px 32px 0 rgb(0 0 0 / 10%)",
+          "count": 1,
+          "prevalence": 3.33
+        },
+        {
+          "value": "-597px 0 0 var(--white)",
+          "count": 1,
+          "prevalence": 3.33
+        },
+        {
+          "value": "597px 0 0 var(--white)",
+          "count": 1,
+          "prevalence": 3.33
+        }
+      ]
+    },
+    "gradients": {
+      "values": [
+        "linear-gradient(0deg,#000000b3,#0000004d 70%,#0000)",
+        "linear-gradient(0deg,#000 20%,#0000)",
+        "linear-gradient(0deg,#0006,#0000)",
+        "linear-gradient(135deg,#00d084,#0693e3)",
+        "linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)",
+        "linear-gradient(135deg,#faaca8,#dad0ec)",
+        "linear-gradient(135deg,#fafae1,#67a671)",
+        "linear-gradient(135deg,#fdd79a,#004a59)",
+        "linear-gradient(135deg,#330968,#31cdcf)",
+        "linear-gradient(135deg,#020381,#2874fc)",
+        "linear-gradient(90deg, var(--lt-grey), var(--dk-blue))",
+        "linear-gradient(110deg, var(--orange) 55%, var(--dk-blue) 55%)",
+        "linear-gradient(90deg, var(--white), rgba(255, 255, 255, 0.65))",
+        "linear-gradient(110deg, var(--orange) 85%, var(--dk-blue) 85%)",
+        "linear-gradient(360deg, var(--orange) 25%, var(--dk-blue) 25%)",
+        "linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%)",
+        "linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%)",
+        "linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%)",
+        "linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%)",
+        "linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%)",
+        "linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%)",
+        "linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%)",
+        "linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%)",
+        "linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%)",
+        "linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%)",
+        "linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%)",
+        "linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%)",
+        "var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple)",
+        "var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan)",
+        "var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange)",
+        "var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red)",
+        "var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray)",
+        "var(--wp--preset--gradient--cool-to-warm-spectrum)",
+        "var(--wp--preset--gradient--blush-light-purple)",
+        "var(--wp--preset--gradient--blush-bordeaux)",
+        "var(--wp--preset--gradient--luminous-dusk)",
+        "var(--wp--preset--gradient--pale-ocean)",
+        "var(--wp--preset--gradient--electric-grass)",
+        "var(--wp--preset--gradient--midnight)"
+      ],
+      "frequency": [
+        {
+          "value": "linear-gradient(0deg,#000 20%,#0000)",
+          "count": 2,
+          "prevalence": 5
+        },
+        {
+          "value": "linear-gradient(0deg,#000000b3,#0000004d 70%,#0000)",
+          "count": 1,
+          "prevalence": 2.5
+        },
+        {
+          "value": "linear-gradient(0deg,#0006,#0000)",
+          "count": 1,
+          "prevalence": 2.5
+        },
+        {
+          "value": "linear-gradient(135deg,#00d084,#0693e3)",
+          "count": 1,
+          "prevalence": 2.5
+        },
+        {
+          "value": "linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)",
+          "count": 1,
+          "prevalence": 2.5
+        },
+        {
+          "value": "linear-gradient(135deg,#faaca8,#dad0ec)",
+          "count": 1,
+          "prevalence": 2.5
+        },
+        {
+          "value": "linear-gradient(135deg,#fafae1,#67a671)",
+          "count": 1,
+          "prevalence": 2.5
+        },
+        {
+          "value": "linear-gradient(135deg,#fdd79a,#004a59)",
+          "count": 1,
+          "prevalence": 2.5
+        },
+        {
+          "value": "linear-gradient(135deg,#330968,#31cdcf)",
+          "count": 1,
+          "prevalence": 2.5
+        },
+        {
+          "value": "linear-gradient(135deg,#020381,#2874fc)",
+          "count": 1,
+          "prevalence": 2.5
+        },
+        {
+          "value": "linear-gradient(90deg, var(--lt-grey), var(--dk-blue))",
+          "count": 1,
+          "prevalence": 2.5
+        },
+        {
+          "value": "linear-gradient(110deg, var(--orange) 55%, var(--dk-blue) 55%)",
+          "count": 1,
+          "prevalence": 2.5
+        },
+        {
+          "value": "linear-gradient(90deg, var(--white), rgba(255, 255, 255, 0.65))",
+          "count": 1,
+          "prevalence": 2.5
+        },
+        {
+          "value": "linear-gradient(110deg, var(--orange) 85%, var(--dk-blue) 85%)",
+          "count": 1,
+          "prevalence": 2.5
+        },
+        {
+          "value": "linear-gradient(360deg, var(--orange) 25%, var(--dk-blue) 25%)",
+          "count": 1,
+          "prevalence": 2.5
+        },
+        {
+          "value": "linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%)",
+          "count": 1,
+          "prevalence": 2.5
+        },
+        {
+          "value": "linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%)",
+          "count": 1,
+          "prevalence": 2.5
+        },
+        {
+          "value": "linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%)",
+          "count": 1,
+          "prevalence": 2.5
+        },
+        {
+          "value": "linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%)",
+          "count": 1,
+          "prevalence": 2.5
+        },
+        {
+          "value": "linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%)",
+          "count": 1,
+          "prevalence": 2.5
+        },
+        {
+          "value": "linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%)",
+          "count": 1,
+          "prevalence": 2.5
+        },
+        {
+          "value": "linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%)",
+          "count": 1,
+          "prevalence": 2.5
+        },
+        {
+          "value": "linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%)",
+          "count": 1,
+          "prevalence": 2.5
+        },
+        {
+          "value": "linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%)",
+          "count": 1,
+          "prevalence": 2.5
+        },
+        {
+          "value": "linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%)",
+          "count": 1,
+          "prevalence": 2.5
+        },
+        {
+          "value": "linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%)",
+          "count": 1,
+          "prevalence": 2.5
+        },
+        {
+          "value": "linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%)",
+          "count": 1,
+          "prevalence": 2.5
+        },
+        {
+          "value": "var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple)",
+          "count": 1,
+          "prevalence": 2.5
+        },
+        {
+          "value": "var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan)",
+          "count": 1,
+          "prevalence": 2.5
+        },
+        {
+          "value": "var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange)",
+          "count": 1,
+          "prevalence": 2.5
+        },
+        {
+          "value": "var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red)",
+          "count": 1,
+          "prevalence": 2.5
+        },
+        {
+          "value": "var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray)",
+          "count": 1,
+          "prevalence": 2.5
+        },
+        {
+          "value": "var(--wp--preset--gradient--cool-to-warm-spectrum)",
+          "count": 1,
+          "prevalence": 2.5
+        },
+        {
+          "value": "var(--wp--preset--gradient--blush-light-purple)",
+          "count": 1,
+          "prevalence": 2.5
+        },
+        {
+          "value": "var(--wp--preset--gradient--blush-bordeaux)",
+          "count": 1,
+          "prevalence": 2.5
+        },
+        {
+          "value": "var(--wp--preset--gradient--luminous-dusk)",
+          "count": 1,
+          "prevalence": 2.5
+        },
+        {
+          "value": "var(--wp--preset--gradient--pale-ocean)",
+          "count": 1,
+          "prevalence": 2.5
+        },
+        {
+          "value": "var(--wp--preset--gradient--electric-grass)",
+          "count": 1,
+          "prevalence": 2.5
+        },
+        {
+          "value": "var(--wp--preset--gradient--midnight)",
+          "count": 1,
+          "prevalence": 2.5
+        }
+      ]
+    },
+    "breakpoints": {
+      "values": [
+        "782px",
+        "781px",
+        "600px",
+        "768px",
+        "769px",
+        "1024px",
+        "1025px",
+        "767px"
+      ],
+      "frequency": [
+        {
+          "value": "768px",
+          "count": 12,
+          "prevalence": 26.67
+        },
+        {
+          "value": "600px",
+          "count": 10,
+          "prevalence": 22.22
+        },
+        {
+          "value": "1024px",
+          "count": 10,
+          "prevalence": 22.22
+        },
+        {
+          "value": "782px",
+          "count": 6,
+          "prevalence": 13.33
+        },
+        {
+          "value": "769px",
+          "count": 2,
+          "prevalence": 4.44
+        },
+        {
+          "value": "1025px",
+          "count": 2,
+          "prevalence": 4.44
+        },
+        {
+          "value": "767px",
+          "count": 2,
+          "prevalence": 4.44
+        },
+        {
+          "value": "781px",
+          "count": 1,
+          "prevalence": 2.22
+        }
+      ]
+    },
+    "zIndices": {
+      "values": [
+        "1",
+        "auto",
+        "0",
+        "2",
+        "100",
+        "100000",
+        "5000000",
+        "9999999999",
+        "3000000",
+        "2000000",
+        "20",
+        "99999",
+        "111100",
+        "111101",
+        "111102",
+        "111105",
+        "111104",
+        "500",
+        "999",
+        "99",
+        "-1"
+      ],
+      "frequency": [
+        {
+          "value": "0",
+          "count": 8,
+          "prevalence": 18.6
+        },
+        {
+          "value": "1",
+          "count": 6,
+          "prevalence": 13.95
+        },
+        {
+          "value": "100000",
+          "count": 4,
+          "prevalence": 9.3
+        },
+        {
+          "value": "2",
+          "count": 3,
+          "prevalence": 6.98
+        },
+        {
+          "value": "111104",
+          "count": 3,
+          "prevalence": 6.98
+        },
+        {
+          "value": "100",
+          "count": 2,
+          "prevalence": 4.65
+        },
+        {
+          "value": "111102",
+          "count": 2,
+          "prevalence": 4.65
+        },
+        {
+          "value": "auto",
+          "count": 2,
+          "prevalence": 4.65
+        },
+        {
+          "value": "20",
+          "count": 1,
+          "prevalence": 2.33
+        },
+        {
+          "value": "99",
+          "count": 1,
+          "prevalence": 2.33
+        },
+        {
+          "value": "500",
+          "count": 1,
+          "prevalence": 2.33
+        },
+        {
+          "value": "999",
+          "count": 1,
+          "prevalence": 2.33
+        },
+        {
+          "value": "99999",
+          "count": 1,
+          "prevalence": 2.33
+        },
+        {
+          "value": "111100",
+          "count": 1,
+          "prevalence": 2.33
+        },
+        {
+          "value": "111101",
+          "count": 1,
+          "prevalence": 2.33
+        },
+        {
+          "value": "111105",
+          "count": 1,
+          "prevalence": 2.33
+        },
+        {
+          "value": "2000000",
+          "count": 1,
+          "prevalence": 2.33
+        },
+        {
+          "value": "3000000",
+          "count": 1,
+          "prevalence": 2.33
+        },
+        {
+          "value": "5000000",
+          "count": 1,
+          "prevalence": 2.33
+        },
+        {
+          "value": "9999999999",
+          "count": 1,
+          "prevalence": 2.33
+        },
+        {
+          "value": "-1",
+          "count": 1,
+          "prevalence": 2.33
+        }
+      ]
+    },
+    "transitions": {
+      "values": [
+        "show-content-image .4s",
+        "opacity .2s ease",
+        "turn-on-visibility .25s both",
+        "turn-on-visibility .35s both",
+        "turn-off-visibility .35s both",
+        "turn-off-visibility .25s both",
+        "none",
+        "lightbox-zoom-in .4s",
+        "turn-on-visibility .4s forwards",
+        "lightbox-zoom-out .4s",
+        "turn-off-visibility .4s forwards",
+        "opacity .1s linear",
+        "overlay-menu__fade-in-animation .1s ease-out",
+        "forwards",
+        "0s",
+        "1ms",
+        "width",
+        ".3s",
+        "transform .1s ease",
+        "color .1s ease-in-out,background-color .1s ease-in-out",
+        "opacity 80ms linear",
+        "150ms",
+        "all 0s ease-in-out",
+        "transform .25s ease-in-out",
+        "fancybox-loading 1.2s linear infinite",
+        "-1.1s",
+        "-1s",
+        "-.9s",
+        "-.8s",
+        "-.7s",
+        "-.6s",
+        "-.5s",
+        "-.4s",
+        "-.3s",
+        "-.2s",
+        "-.1s",
+        "line-height 300ms ease",
+        "inherit",
+        "opacity 0.1s ease-in-out",
+        "spin 2s infinite linear",
+        "height .3s ease",
+        "line-height .3s ease",
+        "background 0.3s, border-color 0.3s, -webkit-box-shadow 0.2s",
+        "background 0.3s, border-color 0.3s, box-shadow 0.2s",
+        "background 0.3s, border-color 0.3s, box-shadow 0.2s, -webkit-box-shadow 0.2s",
+        "opacity var(--d-o, 0.2s), -webkit-transform var(--d-t, 0.3s) var(--d-t-e, ease)",
+        "transform var(--d-t, 0.3s) var(--d-t-e, ease), opacity var(--d-o, 0.2s)",
+        "transform var(--d-t, 0.3s) var(--d-t-e, ease), opacity var(--d-o, 0.2s), -webkit-transform var(--d-t, 0.3s) var(--d-t-e, ease)",
+        "background .1s ease-in-out,\n\t\tborder .1s ease-in-out,\n\t\tcolor .1s ease-in-out"
+      ],
+      "frequency": [
+        {
+          "value": "0s",
+          "count": 6,
+          "prevalence": 9.09
+        },
+        {
+          "value": "none",
+          "count": 4,
+          "prevalence": 6.06
+        },
+        {
+          "value": "opacity 0.1s ease-in-out",
+          "count": 3,
+          "prevalence": 4.55
+        },
+        {
+          "value": "opacity .2s ease",
+          "count": 2,
+          "prevalence": 3.03
+        },
+        {
+          "value": "transform .1s ease",
+          "count": 2,
+          "prevalence": 3.03
+        },
+        {
+          "value": "spin 2s infinite linear",
+          "count": 2,
+          "prevalence": 3.03
+        },
+        {
+          "value": "background 0.3s, border-color 0.3s, -webkit-box-shadow 0.2s",
+          "count": 2,
+          "prevalence": 3.03
+        },
+        {
+          "value": "background 0.3s, border-color 0.3s, box-shadow 0.2s",
+          "count": 2,
+          "prevalence": 3.03
+        },
+        {
+          "value": "opacity var(--d-o, 0.2s), -webkit-transform var(--d-t, 0.3s) var(--d-t-e, ease)",
+          "count": 2,
+          "prevalence": 3.03
+        },
+        {
+          "value": "transform var(--d-t, 0.3s) var(--d-t-e, ease), opacity var(--d-o, 0.2s)",
+          "count": 2,
+          "prevalence": 3.03
+        },
+        {
+          "value": "show-content-image .4s",
+          "count": 1,
+          "prevalence": 1.52
+        },
+        {
+          "value": "turn-on-visibility .25s both",
+          "count": 1,
+          "prevalence": 1.52
+        },
+        {
+          "value": "turn-on-visibility .35s both",
+          "count": 1,
+          "prevalence": 1.52
+        },
+        {
+          "value": "turn-off-visibility .35s both",
+          "count": 1,
+          "prevalence": 1.52
+        },
+        {
+          "value": "turn-off-visibility .25s both",
+          "count": 1,
+          "prevalence": 1.52
+        },
+        {
+          "value": "lightbox-zoom-in .4s",
+          "count": 1,
+          "prevalence": 1.52
+        },
+        {
+          "value": "turn-on-visibility .4s forwards",
+          "count": 1,
+          "prevalence": 1.52
+        },
+        {
+          "value": "lightbox-zoom-out .4s",
+          "count": 1,
+          "prevalence": 1.52
+        },
+        {
+          "value": "turn-off-visibility .4s forwards",
+          "count": 1,
+          "prevalence": 1.52
+        },
+        {
+          "value": "opacity .1s linear",
+          "count": 1,
+          "prevalence": 1.52
+        },
+        {
+          "value": "overlay-menu__fade-in-animation .1s ease-out",
+          "count": 1,
+          "prevalence": 1.52
+        },
+        {
+          "value": "forwards",
+          "count": 1,
+          "prevalence": 1.52
+        },
+        {
+          "value": "1ms",
+          "count": 1,
+          "prevalence": 1.52
+        },
+        {
+          "value": "width",
+          "count": 1,
+          "prevalence": 1.52
+        },
+        {
+          "value": ".3s",
+          "count": 1,
+          "prevalence": 1.52
+        },
+        {
+          "value": "color .1s ease-in-out,background-color .1s ease-in-out",
+          "count": 1,
+          "prevalence": 1.52
+        },
+        {
+          "value": "opacity 80ms linear",
+          "count": 1,
+          "prevalence": 1.52
+        },
+        {
+          "value": "150ms",
+          "count": 1,
+          "prevalence": 1.52
+        },
+        {
+          "value": "all 0s ease-in-out",
+          "count": 1,
+          "prevalence": 1.52
+        },
+        {
+          "value": "transform .25s ease-in-out",
+          "count": 1,
+          "prevalence": 1.52
+        },
+        {
+          "value": "fancybox-loading 1.2s linear infinite",
+          "count": 1,
+          "prevalence": 1.52
+        },
+        {
+          "value": "-1.1s",
+          "count": 1,
+          "prevalence": 1.52
+        },
+        {
+          "value": "-1s",
+          "count": 1,
+          "prevalence": 1.52
+        },
+        {
+          "value": "-.9s",
+          "count": 1,
+          "prevalence": 1.52
+        },
+        {
+          "value": "-.8s",
+          "count": 1,
+          "prevalence": 1.52
+        },
+        {
+          "value": "-.7s",
+          "count": 1,
+          "prevalence": 1.52
+        },
+        {
+          "value": "-.6s",
+          "count": 1,
+          "prevalence": 1.52
+        },
+        {
+          "value": "-.5s",
+          "count": 1,
+          "prevalence": 1.52
+        },
+        {
+          "value": "-.4s",
+          "count": 1,
+          "prevalence": 1.52
+        },
+        {
+          "value": "-.3s",
+          "count": 1,
+          "prevalence": 1.52
+        },
+        {
+          "value": "-.2s",
+          "count": 1,
+          "prevalence": 1.52
+        },
+        {
+          "value": "-.1s",
+          "count": 1,
+          "prevalence": 1.52
+        },
+        {
+          "value": "line-height 300ms ease",
+          "count": 1,
+          "prevalence": 1.52
+        },
+        {
+          "value": "inherit",
+          "count": 1,
+          "prevalence": 1.52
+        },
+        {
+          "value": "height .3s ease",
+          "count": 1,
+          "prevalence": 1.52
+        },
+        {
+          "value": "line-height .3s ease",
+          "count": 1,
+          "prevalence": 1.52
+        },
+        {
+          "value": "background 0.3s, border-color 0.3s, box-shadow 0.2s, -webkit-box-shadow 0.2s",
+          "count": 1,
+          "prevalence": 1.52
+        },
+        {
+          "value": "transform var(--d-t, 0.3s) var(--d-t-e, ease), opacity var(--d-o, 0.2s), -webkit-transform var(--d-t, 0.3s) var(--d-t-e, ease)",
+          "count": 1,
+          "prevalence": 1.52
+        },
+        {
+          "value": "background .1s ease-in-out,\n\t\tborder .1s ease-in-out,\n\t\tcolor .1s ease-in-out",
+          "count": 1,
+          "prevalence": 1.52
+        }
+      ]
+    },
+    "opacity": {
+      "values": [
+        ".5",
+        ".1",
+        ".2",
+        ".3",
+        ".4",
+        ".6",
+        ".7",
+        ".8",
+        ".9",
+        "1",
+        "0",
+        ".85",
+        ".25",
+        "0.1",
+        "0.2",
+        "0.8",
+        "0.9",
+        "var(--o, 0)",
+        "0.6"
+      ],
+      "frequency": [
+        {
+          "value": "1",
+          "count": 18,
+          "prevalence": 24.32
+        },
+        {
+          "value": "0",
+          "count": 12,
+          "prevalence": 16.22
+        },
+        {
+          "value": ".5",
+          "count": 4,
+          "prevalence": 5.41
+        },
+        {
+          "value": ".3",
+          "count": 4,
+          "prevalence": 5.41
+        },
+        {
+          "value": ".6",
+          "count": 4,
+          "prevalence": 5.41
+        },
+        {
+          "value": ".7",
+          "count": 4,
+          "prevalence": 5.41
+        },
+        {
+          "value": ".8",
+          "count": 4,
+          "prevalence": 5.41
+        },
+        {
+          "value": ".9",
+          "count": 4,
+          "prevalence": 5.41
+        },
+        {
+          "value": "0.8",
+          "count": 4,
+          "prevalence": 5.41
+        },
+        {
+          "value": ".1",
+          "count": 3,
+          "prevalence": 4.05
+        },
+        {
+          "value": ".2",
+          "count": 3,
+          "prevalence": 4.05
+        },
+        {
+          "value": ".4",
+          "count": 3,
+          "prevalence": 4.05
+        },
+        {
+          "value": ".85",
+          "count": 1,
+          "prevalence": 1.35
+        },
+        {
+          "value": ".25",
+          "count": 1,
+          "prevalence": 1.35
+        },
+        {
+          "value": "0.1",
+          "count": 1,
+          "prevalence": 1.35
+        },
+        {
+          "value": "0.2",
+          "count": 1,
+          "prevalence": 1.35
+        },
+        {
+          "value": "0.9",
+          "count": 1,
+          "prevalence": 1.35
+        },
+        {
+          "value": "var(--o, 0)",
+          "count": 1,
+          "prevalence": 1.35
+        },
+        {
+          "value": "0.6",
+          "count": 1,
+          "prevalence": 1.35
+        }
+      ]
+    },
+    "aspectRatios": {
+      "values": [
+        "1",
+        "4/3",
+        "3/4",
+        "3/2",
+        "2/3",
+        "16/9",
+        "9/16"
+      ],
+      "frequency": [
+        {
+          "value": "1",
+          "count": 1,
+          "prevalence": 14.29
+        },
+        {
+          "value": "4/3",
+          "count": 1,
+          "prevalence": 14.29
+        },
+        {
+          "value": "3/4",
+          "count": 1,
+          "prevalence": 14.29
+        },
+        {
+          "value": "3/2",
+          "count": 1,
+          "prevalence": 14.29
+        },
+        {
+          "value": "2/3",
+          "count": 1,
+          "prevalence": 14.29
+        },
+        {
+          "value": "16/9",
+          "count": 1,
+          "prevalence": 14.29
+        },
+        {
+          "value": "9/16",
+          "count": 1,
+          "prevalence": 14.29
+        }
+      ]
+    },
+    "borderWidths": {
+      "values": [
+        "inherit",
+        "1px 0 0 1px",
+        "0 1px 1px 0"
+      ],
+      "frequency": [
+        {
+          "value": "0 1px 1px 0",
+          "count": 2,
+          "prevalence": 50
+        },
+        {
+          "value": "inherit",
+          "count": 1,
+          "prevalence": 25
+        },
+        {
+          "value": "1px 0 0 1px",
+          "count": 1,
+          "prevalence": 25
+        }
+      ]
+    },
+    "borderStyles": {
+      "values": [
+        "inherit",
+        "solid",
+        "none"
+      ],
+      "frequency": [
+        {
+          "value": "inherit",
+          "count": 2,
+          "prevalence": 40
+        },
+        {
+          "value": "solid",
+          "count": 2,
+          "prevalence": 40
+        },
+        {
+          "value": "none",
+          "count": 1,
+          "prevalence": 20
+        }
+      ]
+    }
+  }
+}

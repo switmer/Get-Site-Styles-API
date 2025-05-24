@@ -1,0 +1,26 @@
+:root {
+  --radius: 0.5rem;
+  --primary: #e6ff00;
+  --ring: #e6ff00;
+  --primary-foreground: #000000;
+  --secondary: #e6ff03;
+  --secondary-foreground: #000000;
+  --accent: #edff4a;
+  --accent-foreground: #000000;
+  --muted: #ababab;
+  --muted-foreground: #000000;
+
+  /* Layout Zone Colors */
+  --footer-background: #ababab;
+  --footer-foreground: #000000;
+
+  /* Additional Brand Colors */
+  --brand-1: #ababab;
+  --brand-2: #1f1f1f;
+  --brand-3: #000000;
+  --brand-4: #e6ff00;
+  --brand-5: #edff4a;
+  --brand-accent-1: #ababab;
+  --brand-accent-2: #1f1f1f;
+  --brand-accent-3: #000000;
+}
