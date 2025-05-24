@@ -28,7 +28,13 @@ export class SecurityValidator {
 
   validateUrl(urlString: string): URL {
     try {
-      const url = new URL(urlString);
+      // Auto-prepend https:// if no protocol is provided
+      let normalizedUrl = urlString.trim();
+      if (!normalizedUrl.match(/^https?:\/\//i)) {
+        normalizedUrl = `https://${normalizedUrl}`;
+      }
+      
+      const url = new URL(normalizedUrl);
       
       // Check protocol
       if (!['http:', 'https:'].includes(url.protocol)) {
