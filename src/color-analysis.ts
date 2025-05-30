@@ -1218,6 +1218,56 @@ function setColorWithForeground(
   theme[`${baseKey}-foreground`] = getForegroundColor(color, colorFormat, isLightTheme);
 }
 
+// Helper function to adjust color lightness
+function adjustColorLightness(color: string, adjustment: number, format: 'hsl' | 'oklch' | 'hex' = 'hsl'): string {
+  const hsl = colorToHsl(color);
+  const newLightness = Math.max(0, Math.min(100, hsl.l + adjustment));
+  
+  if (format === 'hsl') {
+    return `hsl(${hsl.h} ${hsl.s}% ${newLightness}%)`;
+  } else if (format === 'oklch') {
+    // Convert HSL to OKLCH approximation
+    const oklchL = newLightness / 100;
+    const oklchC = hsl.s / 100 * 0.4; // Rough conversion
+    const oklchH = hsl.h;
+    return `oklch(${oklchL.toFixed(4)} ${oklchC.toFixed(4)} ${oklchH.toFixed(4)})`;
+  } else {
+    // Convert back to hex
+    return hslToHex({ h: hsl.h, s: hsl.s, l: newLightness });
+  }
+}
+
+// Helper function to convert color from a format back to hex
+function convertColorFromFormat(colorValue: string, originalFormat: 'hsl' | 'oklch' | 'hex'): string {
+  if (originalFormat === 'hex') {
+    return colorValue;
+  } else if (originalFormat === 'hsl') {
+    // Parse HSL string like "hsl(200 50% 50%)" or "200 50% 50%"
+    const match = colorValue.match(/hsl\(([^)]+)\)|([0-9]+(?:\.[0-9]+)?)\s+([0-9]+(?:\.[0-9]+)?)%\s+([0-9]+(?:\.[0-9]+)?)%/);
+    if (match) {
+      const values = match[1] ? match[1] : `${match[2]} ${match[3]}% ${match[4]}%`;
+      const parts = values.split(/\s+/);
+      const h = parseFloat(parts[0]);
+      const s = parseFloat(parts[1].replace('%', ''));
+      const l = parseFloat(parts[2].replace('%', ''));
+      return hslToHex({ h, s, l });
+    }
+  } else if (originalFormat === 'oklch') {
+    // Parse OKLCH string like "oklch(0.5 0.2 200)" 
+    const match = colorValue.match(/oklch\(([^)]+)\)/);
+    if (match) {
+      const parts = match[1].split(/\s+/);
+      const l = parseFloat(parts[0]) * 100; // Convert to HSL lightness scale
+      const c = parseFloat(parts[1]) * 100; // Convert to HSL saturation scale  
+      const h = parseFloat(parts[2]);
+      return hslToHex({ h, s: c * 2.5, l }); // Rough conversion
+    }
+  }
+  
+  // Fallback - return as is if we can't parse
+  return colorValue;
+}
+
 export function generateShadcnTheme(colorAnalyses: ColorAnalysis[], colorFormat: 'hsl' | 'oklch' | 'hex' = 'hsl'): { light: Record<string, string>; dark?: Record<string, string> } {
   const theme: { light: Record<string, string>; dark?: Record<string, string> } = {
     light: {}
@@ -1294,9 +1344,6 @@ export function generateShadcnTheme(colorAnalyses: ColorAnalysis[], colorFormat:
   
   // Build complete light theme with specified color format and sensible defaults
   const lightTheme: Record<string, string> = {};
-  
-  // Always include basic structure
-  lightTheme['--radius'] = '0.5rem';
   
   // Background colors - use detected or sensible defaults
   if (backgrounds[0]) {
@@ -1383,6 +1430,68 @@ export function generateShadcnTheme(colorAnalyses: ColorAnalysis[], colorFormat:
     lightTheme['--input'] = defaults.borderGray;
   }
   
+  // Chart colors - build from detected colors with fallbacks
+  const chartColors = [];
+  if (primaryColor) chartColors.push(convertColorToFormat(primaryColor, colorFormat));
+  if (secondaryColor) chartColors.push(convertColorToFormat(secondaryColor, colorFormat));
+  if (accentColor) chartColors.push(convertColorToFormat(accentColor, colorFormat));
+  
+  // Add additional chart colors from other detected colors
+  const otherColors = colorAnalyses
+    .filter(c => c.hex !== primaryColor && c.hex !== secondaryColor && c.hex !== accentColor)
+    .filter(c => c.saturation > 20) // Only saturated colors for charts
+    .sort((a, b) => (b.confidence || 0) - (a.confidence || 0))
+    .slice(0, 5 - chartColors.length);
+  
+  otherColors.forEach(color => {
+    chartColors.push(convertColorToFormat(color.hex, colorFormat));
+  });
+  
+  // Fill remaining chart colors with defaults if needed
+  const defaultChartColors = [
+    primaryColor ? convertColorToFormat(primaryColor, colorFormat) : (colorFormat === 'oklch' ? 'oklch(0.4341 0.0392 41.9938)' : 'hsl(205 100% 50%)'),
+    secondaryColor ? convertColorToFormat(secondaryColor, colorFormat) : (colorFormat === 'oklch' ? 'oklch(0.9200 0.0651 74.3695)' : 'hsl(120 100% 50%)'),
+    accentColor ? convertColorToFormat(accentColor, colorFormat) : (colorFormat === 'oklch' ? 'oklch(0.9310 0 0)' : 'hsl(280 100% 50%)'),
+    colorFormat === 'oklch' ? 'oklch(0.9367 0.0523 75.5009)' : 'hsl(60 100% 50%)',
+    colorFormat === 'oklch' ? 'oklch(0.4338 0.0437 41.6746)' : 'hsl(340 100% 50%)'
+  ];
+  
+  for (let i = 0; i < 5; i++) {
+    lightTheme[`--chart-${i + 1}`] = chartColors[i] || defaultChartColors[i];
+  }
+  
+  // Sidebar colors - derive from primary and background colors
+  const sidebarBase = backgrounds[0] ? 
+    adjustColorLightness(backgrounds[0], 2, colorFormat) : 
+    (colorFormat === 'oklch' ? 'oklch(0.9881 0 0)' : 'hsl(0 0% 98%)');
+  
+  lightTheme['--sidebar'] = sidebarBase;
+  lightTheme['--sidebar-foreground'] = lightTheme['--foreground'];
+  lightTheme['--sidebar-primary'] = lightTheme['--primary'];
+  lightTheme['--sidebar-primary-foreground'] = lightTheme['--primary-foreground'];
+  lightTheme['--sidebar-accent'] = adjustColorLightness(backgrounds[0] || '#ffffff', -2, colorFormat);
+  lightTheme['--sidebar-accent-foreground'] = lightTheme['--foreground'];
+  lightTheme['--sidebar-border'] = adjustColorLightness(lightTheme['--border'], -5, colorFormat);
+  lightTheme['--sidebar-ring'] = lightTheme['--ring'];
+  
+  // Typography variables
+  lightTheme['--font-sans'] = "ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'";
+  lightTheme['--font-serif'] = 'ui-serif, Georgia, Cambria, "Times New Roman", Times, serif';
+  lightTheme['--font-mono'] = 'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace';
+  
+  // Border radius variables
+  lightTheme['--radius'] = '0.5rem';
+  
+  // Shadow variables
+  lightTheme['--shadow-2xs'] = '0 1px 3px 0px hsl(0 0% 0% / 0.05)';
+  lightTheme['--shadow-xs'] = '0 1px 3px 0px hsl(0 0% 0% / 0.05)';
+  lightTheme['--shadow-sm'] = '0 1px 3px 0px hsl(0 0% 0% / 0.10), 0 1px 2px -1px hsl(0 0% 0% / 0.10)';
+  lightTheme['--shadow'] = '0 1px 3px 0px hsl(0 0% 0% / 0.10), 0 1px 2px -1px hsl(0 0% 0% / 0.10)';
+  lightTheme['--shadow-md'] = '0 1px 3px 0px hsl(0 0% 0% / 0.10), 0 2px 4px -1px hsl(0 0% 0% / 0.10)';
+  lightTheme['--shadow-lg'] = '0 1px 3px 0px hsl(0 0% 0% / 0.10), 0 4px 6px -1px hsl(0 0% 0% / 0.10)';
+  lightTheme['--shadow-xl'] = '0 1px 3px 0px hsl(0 0% 0% / 0.10), 0 8px 10px -1px hsl(0 0% 0% / 0.10)';
+  lightTheme['--shadow-2xl'] = '0 1px 3px 0px hsl(0 0% 0% / 0.25)';
+  
   theme.light = lightTheme;
   
   // Generate dark theme using specified color format with intelligent adjustments
@@ -1390,9 +1499,6 @@ export function generateShadcnTheme(colorAnalyses: ColorAnalysis[], colorFormat:
   
   if (hasColorVariation && Object.keys(lightTheme).length > 3) {
     const darkTheme: Record<string, string> = {};
-    
-    // Always include basic structure
-    darkTheme['--radius'] = '0.5rem';
     
     // Generate dark theme backgrounds and foregrounds
     if (backgrounds[0]) {
@@ -1403,11 +1509,11 @@ export function generateShadcnTheme(colorAnalyses: ColorAnalysis[], colorFormat:
     } else {
       // Standard dark background - different shades for depth
       darkTheme['--background'] = colorFormat === 'hsl' ? '240 9% 2%' : 
-                                  colorFormat === 'oklch' ? 'oklch(0.141 0.005 285.823)' : '#0a0a0a';
+                                  colorFormat === 'oklch' ? 'oklch(0.1776 0 0)' : '#0a0a0a';
       darkTheme['--card'] = colorFormat === 'hsl' ? '240 6% 10%' :
-                           colorFormat === 'oklch' ? 'oklch(0.21 0.006 285.885)' : '#1a1a1a';
+                           colorFormat === 'oklch' ? 'oklch(0.2134 0 0)' : '#1a1a1a';
       darkTheme['--popover'] = colorFormat === 'hsl' ? '240 6% 10%' :
-                              colorFormat === 'oklch' ? 'oklch(0.21 0.006 285.885)' : '#1a1a1a';
+                              colorFormat === 'oklch' ? 'oklch(0.2134 0 0)' : '#1a1a1a';
     }
     
     if (foregrounds[0]) {
@@ -1417,9 +1523,9 @@ export function generateShadcnTheme(colorAnalyses: ColorAnalysis[], colorFormat:
       darkTheme['--popover-foreground'] = darkFg;
     } else {
       // Standard light foreground for dark mode
-      darkTheme['--foreground'] = defaults.white;
-      darkTheme['--card-foreground'] = defaults.white;
-      darkTheme['--popover-foreground'] = defaults.white;
+      darkTheme['--foreground'] = colorFormat === 'oklch' ? 'oklch(0.9491 0 0)' : defaults.white;
+      darkTheme['--card-foreground'] = colorFormat === 'oklch' ? 'oklch(0.9491 0 0)' : defaults.white;
+      darkTheme['--popover-foreground'] = colorFormat === 'oklch' ? 'oklch(0.9491 0 0)' : defaults.white;
     }
     
     // Adjust brand colors for dark mode while preserving their character
@@ -1436,8 +1542,8 @@ export function generateShadcnTheme(colorAnalyses: ColorAnalysis[], colorFormat:
       darkTheme['--secondary-foreground'] = getForegroundColor(secondaryColor, colorFormat, false);
     } else {
       // Default dark secondary
-      darkTheme['--secondary'] = defaults.mutedGray;
-      darkTheme['--secondary-foreground'] = defaults.white;
+      darkTheme['--secondary'] = colorFormat === 'oklch' ? 'oklch(0.3163 0.0190 63.6992)' : defaults.mutedGray;
+      darkTheme['--secondary-foreground'] = colorFormat === 'oklch' ? 'oklch(0.9247 0.0524 66.1732)' : defaults.white;
     }
     
     if (accentColor) {
@@ -1446,8 +1552,8 @@ export function generateShadcnTheme(colorAnalyses: ColorAnalysis[], colorFormat:
       darkTheme['--accent-foreground'] = getForegroundColor(accentColor, colorFormat, false);
     } else {
       // Default dark accent
-      darkTheme['--accent'] = defaults.mutedGray;
-      darkTheme['--accent-foreground'] = defaults.white;
+      darkTheme['--accent'] = colorFormat === 'oklch' ? 'oklch(0.2850 0 0)' : defaults.mutedGray;
+      darkTheme['--accent-foreground'] = colorFormat === 'oklch' ? 'oklch(0.9491 0 0)' : defaults.white;
     }
     
     if (destructives[0]) {
@@ -1456,8 +1562,8 @@ export function generateShadcnTheme(colorAnalyses: ColorAnalysis[], colorFormat:
       darkTheme['--destructive-foreground'] = getForegroundColor(destructives[0], colorFormat, false);
     } else {
       // Default dark destructive
-      darkTheme['--destructive'] = defaults.destructiveRed;
-      darkTheme['--destructive-foreground'] = defaults.white;
+      darkTheme['--destructive'] = colorFormat === 'oklch' ? 'oklch(0.6271 0.1936 33.3390)' : defaults.destructiveRed;
+      darkTheme['--destructive-foreground'] = colorFormat === 'oklch' ? 'oklch(1.0000 0 0)' : defaults.white;
     }
     
     // Adjust borders and muted colors for dark mode
@@ -1466,20 +1572,57 @@ export function generateShadcnTheme(colorAnalyses: ColorAnalysis[], colorFormat:
       darkTheme['--border'] = darkBorder;
       darkTheme['--input'] = darkBorder;
     } else {
-      // Default dark borders using the defaults system
-      darkTheme['--border'] = defaults.borderGray;
-      darkTheme['--input'] = defaults.mutedGray;
+      // Default dark borders
+      darkTheme['--border'] = colorFormat === 'oklch' ? 'oklch(0.2351 0.0115 91.7467)' : defaults.borderGray;
+      darkTheme['--input'] = colorFormat === 'oklch' ? 'oklch(0.4017 0 0)' : defaults.mutedGray;
     }
     
     if (muteds[0]) {
       const darkMuted = adjustColorForDarkMode(muteds[0], 'muted', colorFormat);
       darkTheme['--muted'] = darkMuted;
-      darkTheme['--muted-foreground'] = defaults.white;
+      darkTheme['--muted-foreground'] = colorFormat === 'oklch' ? 'oklch(0.7699 0 0)' : defaults.white;
     } else {
       // Default dark muted
-      darkTheme['--muted'] = defaults.mutedGray;
-      darkTheme['--muted-foreground'] = defaults.white;
+      darkTheme['--muted'] = colorFormat === 'oklch' ? 'oklch(0.2520 0 0)' : defaults.mutedGray;
+      darkTheme['--muted-foreground'] = colorFormat === 'oklch' ? 'oklch(0.7699 0 0)' : defaults.white;
     }
+    
+    // Chart colors for dark theme - adjust lightness/contrast
+    for (let i = 0; i < 5; i++) {
+      const lightChartColor = lightTheme[`--chart-${i + 1}`];
+      darkTheme[`--chart-${i + 1}`] = adjustBrandColorForDarkMode(
+        convertColorFromFormat(lightChartColor, colorFormat), 
+        colorFormat
+      );
+    }
+    
+    // Sidebar colors for dark theme
+    darkTheme['--sidebar'] = colorFormat === 'oklch' ? 'oklch(0.2103 0.0059 285.8852)' : 'hsl(240 6% 10%)';
+    darkTheme['--sidebar-foreground'] = colorFormat === 'oklch' ? 'oklch(0.9674 0.0013 286.3752)' : darkTheme['--foreground'];
+    darkTheme['--sidebar-primary'] = colorFormat === 'oklch' ? 'oklch(0.4882 0.2172 264.3763)' : darkTheme['--primary'];
+    darkTheme['--sidebar-primary-foreground'] = colorFormat === 'oklch' ? 'oklch(1.0000 0 0)' : darkTheme['--primary-foreground'];
+    darkTheme['--sidebar-accent'] = colorFormat === 'oklch' ? 'oklch(0.2739 0.0055 286.0326)' : 'hsl(240 6% 15%)';
+    darkTheme['--sidebar-accent-foreground'] = colorFormat === 'oklch' ? 'oklch(0.9674 0.0013 286.3752)' : darkTheme['--foreground'];
+    darkTheme['--sidebar-border'] = colorFormat === 'oklch' ? 'oklch(0.2739 0.0055 286.0326)' : darkTheme['--border'];
+    darkTheme['--sidebar-ring'] = colorFormat === 'oklch' ? 'oklch(0.8711 0.0055 286.2860)' : darkTheme['--ring'];
+    
+    // Typography variables (same for dark theme)
+    darkTheme['--font-sans'] = lightTheme['--font-sans'];
+    darkTheme['--font-serif'] = lightTheme['--font-serif'];
+    darkTheme['--font-mono'] = lightTheme['--font-mono'];
+    
+    // Border radius variables (same for dark theme)
+    darkTheme['--radius'] = lightTheme['--radius'];
+    
+    // Shadow variables (same for dark theme)
+    darkTheme['--shadow-2xs'] = lightTheme['--shadow-2xs'];
+    darkTheme['--shadow-xs'] = lightTheme['--shadow-xs'];
+    darkTheme['--shadow-sm'] = lightTheme['--shadow-sm'];
+    darkTheme['--shadow'] = lightTheme['--shadow'];
+    darkTheme['--shadow-md'] = lightTheme['--shadow-md'];
+    darkTheme['--shadow-lg'] = lightTheme['--shadow-lg'];
+    darkTheme['--shadow-xl'] = lightTheme['--shadow-xl'];
+    darkTheme['--shadow-2xl'] = lightTheme['--shadow-2xl'];
     
     theme.dark = darkTheme;
   }

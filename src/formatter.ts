@@ -381,46 +381,88 @@ export function formatOutput(tokens: any, meta: any, options: Options): any {
     
     css += '\n}';
     
-          if (shadcnTheme.dark) {
-        css += `\n\n.dark {\n${formatCssVariables(shadcnTheme.dark)}`;
-        
-        // Add layout zone colors to dark theme (same as light for now)
-        if (Object.keys(layoutZoneColors).length > 0) {
-          css += `\n\n  /* Layout Zone Colors */\n${formatCssVariables(layoutZoneColors)}`;
-        }
-        
-        // Add additional brand colors to dark theme (same as light for now)
-        if (Object.keys(additionalBrandColors).length > 0) {
-          css += `\n\n  /* Additional Brand Colors */\n${formatCssVariables(additionalBrandColors)}`;
-        }
-        
-        // Add button-specific colors to dark theme
-        if (Object.keys(buttonSpecificColors).length > 0) {
-          css += `\n\n  /* Button Colors */\n${formatCssVariables(buttonSpecificColors)}`;
-        }
-        
-        css += '\n}';
+    if (shadcnTheme.dark) {
+      css += `\n\n.dark {\n${formatCssVariables(shadcnTheme.dark)}`;
+      
+      // Add layout zone colors to dark theme (same as light for now)
+      if (Object.keys(layoutZoneColors).length > 0) {
+        css += `\n\n  /* Layout Zone Colors */\n${formatCssVariables(layoutZoneColors)}`;
       }
+      
+      // Add additional brand colors to dark theme (same as light for now)
+      if (Object.keys(additionalBrandColors).length > 0) {
+        css += `\n\n  /* Additional Brand Colors */\n${formatCssVariables(additionalBrandColors)}`;
+      }
+      
+      // Add button-specific colors to dark theme
+      if (Object.keys(buttonSpecificColors).length > 0) {
+        css += `\n\n  /* Button Colors */\n${formatCssVariables(buttonSpecificColors)}`;
+      }
+      
+      css += '\n}';
+    }
     
-          return {
-        meta: {
-          ...meta,
-          format: 'shadcn',
-          colorAnalysis: colorAnalyses.map(c => ({
-            color: c.hex,
-            role: c.role,
-            frequency: c.frequency,
-            lightness: c.lightness,
-            saturation: c.saturation
-          }))
-        },
-        css,
-        theme: {
-          ...shadcnTheme,
-          layoutZoneColors,
-          additionalBrandColors,
-          buttonColors: buttonSpecificColors
-        },
+    // Add modern @theme inline section for Tailwind integration
+    css += '\n\n@theme inline {\n';
+    
+    // Color variables mapping
+    const themeColors = [
+      'background', 'foreground', 'card', 'card-foreground', 'popover', 'popover-foreground',
+      'primary', 'primary-foreground', 'secondary', 'secondary-foreground', 
+      'muted', 'muted-foreground', 'accent', 'accent-foreground',
+      'destructive', 'destructive-foreground', 'border', 'input', 'ring',
+      'chart-1', 'chart-2', 'chart-3', 'chart-4', 'chart-5',
+      'sidebar', 'sidebar-foreground', 'sidebar-primary', 'sidebar-primary-foreground',
+      'sidebar-accent', 'sidebar-accent-foreground', 'sidebar-border', 'sidebar-ring'
+    ];
+    
+    themeColors.forEach(colorName => {
+      css += `  --color-${colorName}: var(--${colorName});\n`;
+    });
+    
+    // Typography variables
+    css += '\n  --font-sans: var(--font-sans);\n';
+    css += '  --font-mono: var(--font-mono);\n';
+    css += '  --font-serif: var(--font-serif);\n';
+    
+    // Border radius variants
+    css += '\n  --radius-sm: calc(var(--radius) - 4px);\n';
+    css += '  --radius-md: calc(var(--radius) - 2px);\n';
+    css += '  --radius-lg: var(--radius);\n';
+    css += '  --radius-xl: calc(var(--radius) + 4px);\n';
+    
+    // Shadow variables
+    const shadowVariables = [
+      'shadow-2xs', 'shadow-xs', 'shadow-sm', 'shadow', 
+      'shadow-md', 'shadow-lg', 'shadow-xl', 'shadow-2xl'
+    ];
+    
+    css += '\n';
+    shadowVariables.forEach(shadowName => {
+      css += `  --${shadowName}: var(--${shadowName});\n`;
+    });
+    
+    css += '}';
+    
+    return {
+      meta: {
+        ...meta,
+        format: 'shadcn',
+        colorAnalysis: colorAnalyses.map(c => ({
+          color: c.hex,
+          role: c.role,
+          frequency: c.frequency,
+          lightness: c.lightness,
+          saturation: c.saturation
+        }))
+      },
+      css,
+      theme: {
+        ...shadcnTheme,
+        layoutZoneColors,
+        additionalBrandColors,
+        buttonColors: buttonSpecificColors
+      },
       tokens: {
         // Include original tokens for reference
         colors: tokens.colors.values,
