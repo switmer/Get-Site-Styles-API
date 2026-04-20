@@ -467,12 +467,16 @@ export function formatOutput(tokens: any, meta: any, options: Options): any {
         // Include original tokens for reference
         colors: tokens.colors.values,
         fontSizes: tokens.fontSizes.values,
+        fontFamilies: tokens.fontFamilies.values,
+        fontWeights: tokens.fontWeights.values,
+        lineHeights: tokens.lineHeights.values,
+        letterSpacings: tokens.letterSpacings.values,
         spacing: tokens.spacing.values,
         radii: tokens.radii.values
       }
     };
   }
-  
+
   if (format === 'tailwind') {
     // Prepare semantic data for enhanced color analysis
     let semanticData: Array<{ color: string; domDepth?: number; firstSeenIndex?: number; documentPosition?: number; weight: number; context: string }> | undefined;
