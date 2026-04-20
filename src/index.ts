@@ -5,6 +5,7 @@ import safeParser from 'postcss-safe-parser';
 import fs from 'fs';
 import path from 'path';
 import { formatOutput } from './formatter';
+import { generateSiteSpec } from './site-spec-formatter';
 import { HttpClient } from './http-client';
 import { SecurityValidator } from './security';
 import { MultiSourceAnalyzer } from './multi-source-analyzer';
@@ -30,6 +31,7 @@ program
   .option('--include-images', 'Analyze images for additional brand colors (experimental)')
   .option('--max-images <number>', 'Maximum number of images to analyze', '10')
   .option('--semantic-analysis', 'Analyze HTML elements for semantic color importance (buttons, nav, etc.)')
+  .option('--design-md', 'Emit a site-spec resource pack (DESIGN.md / STRUCTURE.md / COMPONENTS.md / IMPLEMENTATION.md / CAVEATS.md) alongside shadcn output')
   .parse(process.argv);
 
 const options = program.opts();
@@ -615,7 +617,19 @@ async function extractStyles(html: string, baseUrl: string): Promise<void> {
         
         // Also save the analysis data
         const analysisPath = outputPath.replace('.css', '.analysis.json');
-        fs.writeFileSync(analysisPath, JSON.stringify(output, null, 2), 'utf-8');
+        const analysisJsonString = JSON.stringify(output, null, 2);
+        fs.writeFileSync(analysisPath, analysisJsonString, 'utf-8');
+        if (options.designMd) {
+          const specDir = analysisPath.replace('.analysis.json', '-spec');
+          fs.mkdirSync(specDir, { recursive: true });
+          const spec = generateSiteSpec({ meta: output.meta, tokens: output.tokens, bindings: output.bindings, theme: output.theme, cssPath: outputPath, analysisJsonString });
+          fs.writeFileSync(path.join(specDir, 'DESIGN.md'), spec.designMd, 'utf-8');
+          fs.writeFileSync(path.join(specDir, 'STRUCTURE.md'), spec.structureMd, 'utf-8');
+          fs.writeFileSync(path.join(specDir, 'COMPONENTS.md'), spec.componentsMd, 'utf-8');
+          fs.writeFileSync(path.join(specDir, 'IMPLEMENTATION.md'), spec.implementationMd, 'utf-8');
+          fs.writeFileSync(path.join(specDir, 'CAVEATS.md'), spec.caveatsMd, 'utf-8');
+          console.log(`📁 site-spec pack written to ${specDir}/ (5 files, shared canonical_hash)`);
+        }
         console.log(`  ✅ ${format}: ${outputPath}`);
         console.log(`  📊 ${format} analysis: ${analysisPath}`);
       } else {
@@ -659,7 +673,19 @@ async function extractStyles(html: string, baseUrl: string): Promise<void> {
       
       // Also save the analysis data
       const analysisPath = outputPath.replace('.css', '.analysis.json');
-      fs.writeFileSync(analysisPath, JSON.stringify(output, null, 2), 'utf-8');
+      const analysisJsonString = JSON.stringify(output, null, 2);
+        fs.writeFileSync(analysisPath, analysisJsonString, 'utf-8');
+        if (options.designMd) {
+          const specDir = analysisPath.replace('.analysis.json', '-spec');
+          fs.mkdirSync(specDir, { recursive: true });
+          const spec = generateSiteSpec({ meta: output.meta, tokens: output.tokens, bindings: output.bindings, theme: output.theme, cssPath: outputPath, analysisJsonString });
+          fs.writeFileSync(path.join(specDir, 'DESIGN.md'), spec.designMd, 'utf-8');
+          fs.writeFileSync(path.join(specDir, 'STRUCTURE.md'), spec.structureMd, 'utf-8');
+          fs.writeFileSync(path.join(specDir, 'COMPONENTS.md'), spec.componentsMd, 'utf-8');
+          fs.writeFileSync(path.join(specDir, 'IMPLEMENTATION.md'), spec.implementationMd, 'utf-8');
+          fs.writeFileSync(path.join(specDir, 'CAVEATS.md'), spec.caveatsMd, 'utf-8');
+          console.log(`📁 site-spec pack written to ${specDir}/ (5 files, shared canonical_hash)`);
+        }
       console.log(`Shadcn CSS written to ${outputPath}`);
       console.log(`Analysis data written to ${analysisPath}`);
     } else {
@@ -755,7 +781,19 @@ async function saveMultiSourceResults(multiResult: MultiSourceTokens, options: a
         
         // Also save the analysis data
         const analysisPath = outputPath.replace('.css', '.analysis.json');
-        fs.writeFileSync(analysisPath, JSON.stringify(output, null, 2), 'utf-8');
+        const analysisJsonString = JSON.stringify(output, null, 2);
+        fs.writeFileSync(analysisPath, analysisJsonString, 'utf-8');
+        if (options.designMd) {
+          const specDir = analysisPath.replace('.analysis.json', '-spec');
+          fs.mkdirSync(specDir, { recursive: true });
+          const spec = generateSiteSpec({ meta: output.meta, tokens: output.tokens, bindings: output.bindings, theme: output.theme, cssPath: outputPath, analysisJsonString });
+          fs.writeFileSync(path.join(specDir, 'DESIGN.md'), spec.designMd, 'utf-8');
+          fs.writeFileSync(path.join(specDir, 'STRUCTURE.md'), spec.structureMd, 'utf-8');
+          fs.writeFileSync(path.join(specDir, 'COMPONENTS.md'), spec.componentsMd, 'utf-8');
+          fs.writeFileSync(path.join(specDir, 'IMPLEMENTATION.md'), spec.implementationMd, 'utf-8');
+          fs.writeFileSync(path.join(specDir, 'CAVEATS.md'), spec.caveatsMd, 'utf-8');
+          console.log(`📁 site-spec pack written to ${specDir}/ (5 files, shared canonical_hash)`);
+        }
         console.log(`  ✅ ${format}: ${outputPath}`);
         console.log(`  📊 ${format} analysis: ${analysisPath}`);
       } else {
@@ -799,7 +837,19 @@ async function saveMultiSourceResults(multiResult: MultiSourceTokens, options: a
       
       // Also save the analysis data
       const analysisPath = outputPath.replace('.css', '.analysis.json');
-      fs.writeFileSync(analysisPath, JSON.stringify(output, null, 2), 'utf-8');
+      const analysisJsonString = JSON.stringify(output, null, 2);
+        fs.writeFileSync(analysisPath, analysisJsonString, 'utf-8');
+        if (options.designMd) {
+          const specDir = analysisPath.replace('.analysis.json', '-spec');
+          fs.mkdirSync(specDir, { recursive: true });
+          const spec = generateSiteSpec({ meta: output.meta, tokens: output.tokens, bindings: output.bindings, theme: output.theme, cssPath: outputPath, analysisJsonString });
+          fs.writeFileSync(path.join(specDir, 'DESIGN.md'), spec.designMd, 'utf-8');
+          fs.writeFileSync(path.join(specDir, 'STRUCTURE.md'), spec.structureMd, 'utf-8');
+          fs.writeFileSync(path.join(specDir, 'COMPONENTS.md'), spec.componentsMd, 'utf-8');
+          fs.writeFileSync(path.join(specDir, 'IMPLEMENTATION.md'), spec.implementationMd, 'utf-8');
+          fs.writeFileSync(path.join(specDir, 'CAVEATS.md'), spec.caveatsMd, 'utf-8');
+          console.log(`📁 site-spec pack written to ${specDir}/ (5 files, shared canonical_hash)`);
+        }
       console.log(`✅ Multi-source Shadcn CSS written to ${outputPath}`);
       console.log(`📊 Analysis data written to ${analysisPath}`);
     } else {
